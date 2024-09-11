@@ -6,8 +6,9 @@ import { useParams } from 'react-router-dom'
 import Projects from '../../api/projects'
 import { Link } from 'react-router-dom'
 import Footer from '../../components/footer';
-import ReactFancyBox from 'react-fancybox'
-import 'react-fancybox/lib/fancybox.css'
+import ReactFancyBox from './ReactFancyBox'
+// import ReactFancyBox from 'react-fancybox'
+// import 'react-fancybox/lib/fancybox.css'
 
 const ProjectSinglePage = (props) => {
     const { id } = useParams()
@@ -21,7 +22,7 @@ const ProjectSinglePage = (props) => {
 
     return (
         <Fragment>
-            <Navbar2/>
+            <Navbar2 />
             <PageTitle pageTitle={projectDetails.title} pagesub={'Service'} />
             <section className="wpo-portfolio-single-section section-padding">
                 <div className="container">
@@ -29,7 +30,7 @@ const ProjectSinglePage = (props) => {
                         <div className="row align-items-center">
                             <div className="col-lg-6 col-12">
                                 <div className="portfolio-single-img">
-                                    <img src={projectDetails.pSimg} alt=""/>
+                                    <img src={projectDetails.pSimg} alt="" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-12">
@@ -69,7 +70,7 @@ const ProjectSinglePage = (props) => {
                                                     <ReactFancyBox
                                                         thumbnail={project.pimg1}
                                                         image={project.pimg1}
-                                                        />
+                                                    />
                                                 </div>
                                             </div>
                                         ))}
@@ -86,8 +87,8 @@ const ProjectSinglePage = (props) => {
                     </div>
                 </div>
             </section>
-            <Footer/>
-            <Scrollbar/>
+            <Footer />
+            <Scrollbar />
         </Fragment>
     )
 };

@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import { withStyles } from '@mui/material/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const defaultTheme = createTheme();
+const theme = createTheme();
 
 const LocationMap = ({ maxWidth, button, buttonClass }) => {
   const [open, setOpen] = React.useState(false);
