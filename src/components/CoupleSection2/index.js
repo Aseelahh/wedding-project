@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
-import Slide from 'react-reveal/Slide';
+import { Link } from 'react-router-dom'
+// import Slide from 'react-reveal/Slide';
 import coupleImg1 from '../../images/couple/2.jpg'
 import coupleImg2 from '../../images/couple/3.jpg'
- 
+import CascadingLoveText from "./CascadingLoveText"
+
 class CoupleSection2 extends Component {
 
     render() {
-        return(
+        return (
             <section className={`couple-section-s2 section-padding ${this.props.cClass}`} id="couple">
                 <div className="container">
                     <div className="row align-items-center">
@@ -17,7 +18,7 @@ class CoupleSection2 extends Component {
                                     <div className="col-lg-4">
                                         <div className="couple-item">
                                             <div className="couple-img">
-                                                <img src={coupleImg1} alt=""/>
+                                                <img src={coupleImg1} alt="" />
                                             </div>
                                             <div className="couple-text">
                                                 <h3>Daniel Watson</h3>
@@ -35,20 +36,21 @@ class CoupleSection2 extends Component {
                                     </div>
                                     <div className="col-lg-4">
                                         <div className="middle-couple-text">
-                                            <Slide bottom cascade>
+                                            {/* <Slide bottom cascade>
                                                 <h2>
                                                     <span>L</span>
                                                     <span>o</span>
                                                     <span>v</span>
                                                     <span>e</span>
                                                 </h2>
-                                            </Slide>
+                                            </Slide> */}
+                                            <CascadingLoveText />
                                         </div>
                                     </div>
                                     <div className="col-lg-4">
                                         <div className="couple-item">
                                             <div className="couple-img">
-                                                <img src={coupleImg2} alt=""/>
+                                                <img src={coupleImg2} alt="" />
                                             </div>
                                             <div className="couple-text">
                                                 <h3>Jessica Henry</h3>
@@ -70,9 +72,9 @@ class CoupleSection2 extends Component {
                     </div>
                 </div>
             </section>
-            
+
         );
     }
 }
- 
+
 export default CoupleSection2;
