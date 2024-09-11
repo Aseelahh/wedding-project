@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import SectionTitle from "../../components/SectionTitle";
 import { TabContent, TabPane, Nav, NavItem, NavLink } from "reactstrap";
 import classnames from "classnames";
-import sImg1 from "../../images/story/1.jpg";
-import sImg2 from "../../images/story/2.jpg";
-import sImg3 from "../../images/story/3.jpg";
-import sImg4 from "../../images/story/4.jpg";
+import sImg1 from "../../images/story/FM.png";
+import sImg2 from "../../images/story/FD.png";
+import sImg3 from "../../images/story/MEM.png";
+import sImg4 from "../../images/story/MP.png";
 
 import sIcon1 from "../../images/story/1.png";
 import sIcon2 from "../../images/story/2.png";
@@ -67,9 +67,9 @@ const StorySection = (props) => {
       sIcon: sIcon3,
       Shape: Shape,
       sTitle: "Favorite memory",
-      date: "Sep 15,2022",
+      date: "Nov 17,2021",
       description:
-        "I must explain to you how all this mistaken idea of denouing pleasure and praising pain was born and I will give you com acount of system,the actual teach",
+        " I could never forget this day. You picked me up from my hostel after my ICAN exam and we went to chill at Presken. That's when you asked me to be your girlfriend and without any hesitation, I said yes! Sometimes, the answer to a question is already clear before you even ask it.",
     },
     {
       Id: "4",
@@ -77,9 +77,9 @@ const StorySection = (props) => {
       sIcon: sIcon4,
       Shape: Shape,
       sTitle: "Marriage Proposal",
-      date: "Sep 15,2022",
+      date: "Dec 16,2023",
       description:
-        "I must explain to you how all this mistaken idea of denouing pleasure and praising pain was born and I will give you com acount of system,the actual teach",
+        "From the first day i met you, i knew it was you. 'Saying yes to him was the easiest thing I've ever done, without a second thought'-'Asking her to marry me was the best decision of my life' ",
     },
   ];
 
@@ -115,14 +115,17 @@ const StorySection = (props) => {
                     <div className="wpo-story-item">
                       <div className="wpo-story-img">
                         <img
-                          src="{require('../../../../feelings/src/images/FD.png')}"
+                          src={story.sImg}
                           alt=""
                         />
                       </div>
                       <div className="wpo-story-content">
                         <div className="wpo-story-content-inner">
                           <span>
-                            <img src="{require('../../../../feelings/src/images/FD.png')}" alt="" />
+                            <img
+                              src={require("../../images/story/1.png")}
+                              alt=""
+                            />
                           </span>
                           <h2>{story.sTitle}</h2>
                           <span>{story.date}</span>

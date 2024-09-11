@@ -84,12 +84,7 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 .flaticon-youtube:before {
     content: "\f116";
 }
-.flaticon-search:before {
-    content: "\f117";
-}
-.flaticon-shopping-cart:before {
-    content: "\f118";
-}
+
 .flaticon-left-arrow-1:before {
     content: "\f119";
 }

@@ -13,7 +13,7 @@ class CoupleSection extends Component {
                             <div className="couple-area clearfix">
                                 <div className="text-grid bride">
                                     <h3>Ifechukwu Chiedu</h3>
-                                    <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                                    <p>I cannot remember how life was without him, because ever since I met him the narrative changed and I realized there was a part of me that was dark and he lit it up. I love you very much Obim ❤️❤️ </p>
                                     <div className="social">
                                         <ul>
                                             <li><Link to="/"><i className="ti-facebook"></i></Link></li>
@@ -29,7 +29,7 @@ class CoupleSection extends Component {
                                 </div>
                                 <div className="text-grid groom">
                                     <h3>Obinna Okeke</h3>
-                                    <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                                    <p>I did not think any day could surpass the day I met her in being the best day of my life but it is second only to the day she agreed to be my wife. It's a few days to our wedding, rather than thinking if i'm doing the right thing, i wish i asked her earlier. I love you ❤️.</p>
                                     <div className="social">
                                         <ul>
                                             <li><Link to="/"><i className="ti-facebook"></i></Link></li>

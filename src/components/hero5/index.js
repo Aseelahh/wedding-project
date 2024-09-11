@@ -11,14 +11,14 @@ const Hero5 = (props) => {
               <div className="col-lg-6">
                 <div className="wpo-event-item">
                   <div className="wpo-event-text">
-                    <h2>Daniel & Jessica</h2>
-                    <p>We Are Getting Married Nov 22,2022</p>
+                    <h2>Obinna & Ifeh</h2>
+                    <p>We Are Getting Married Sept 14,2024</p>
                     <ul>
                       <li>
-                        Monday, 25 Sep, 2022 <br />
-                        1:00 PM – 4:30 PM
+                        Saturday, 14 Sep, 2024 <br />
+                        11:00 AM – 9:00 PM
                       </li>
-                      <li>Estern Star Plaza, Road 123, USA</li>
+                      <li>Pleasant Event Center Obanta Avenue, off Ajao Str, Adeniyi Jones, Ikeja Lagos</li>
                       <li>
                         <LocationMap />
                       </li>

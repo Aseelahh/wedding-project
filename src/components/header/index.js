@@ -124,7 +124,7 @@ class Header extends Component {
                       >
                         {" "}
                         <i className="fi flaticon-shopping-cart"></i>{" "}
-                        <span className="cart-count">{carts.length}</span>
+                        
                       </button>
                       <div
                         className={`mini-cart-content ${isCartShow ? "mini-cart-content-toggle" : ""

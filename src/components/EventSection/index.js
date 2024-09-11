@@ -8,22 +8,24 @@ import LocationMap from "../LocationMap";
 const Events = [
   {
     Simg: sImg1,
-    title: "The Reception",
-    li1: "Monday, 25 Sep, 2022 1:00 PM – 4:30 PM",
-    li2: "Estern Star Plaza, Road 123, USA",
+    title: "White Wedding ",
+    li1: "Saturday, 14 Sep, 2024 11:00 AM – 1:00 PM",
+    li2: "St Peter Claver Catholic Church, Ajao Estate, Lagos",
   },
   {
     Simg: sImg2,
-    title: "THE CEREMONY",
-    li1: "Monday, 25 Sep, 2022 1:00 PM – 4:30 PM",
-    li2: "Estern Star Plaza, Road 123, USA",
+    title: "RECEPTION",
+    li1: "Saturday, 14 Sep, 2024   1:00 PM – 4:00 PM",
+    li2: "Pleasant Event Center Obanta Avenue, off Ajao Str, Adeniyi Jones, Ikeja Lagos",
   },
+
   {
     Simg: sImg3,
-    title: "Wedding Party",
-    li1: "Monday, 25 Sep, 2022 1:00 PM – 4:30 PM",
-    li2: "Estern Star Plaza, Road 123, USA",
-  },
+    title: "AFTER PARTY",
+    li1: "Saturday, 14 Sep, 2024   4:00 PM – 9:00 PM",
+    li2: "Pleasant Event Center Obanta Avenue, off Ajao Str, Adeniyi Jones, Ikeja Lagos",
+  }
+  
 ];
 
 const EventSection = (props) => {
