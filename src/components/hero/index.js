@@ -18,10 +18,10 @@ const Hero = (props) => {
                                 <div className="wpo-static-hero-inner">
                                     <div className="shape-1"><img src={hImg1} alt="hImg1"/></div>
                                     <div data-swiper-parallax="300" className="slide-title">
-                                        <h2>Daniel & Jessica</h2>
+                                        <h2>Ifeh & Obinna</h2>
                                     </div>
                                     <div data-swiper-parallax="400" className="slide-text">
-                                        <p>We Are Getting Married Jul 8, 2022</p>
+                                        <p>We Are Getting Married Sept 14th 2024</p>
                                     </div>
                                     <div className="wpo-wedding-date">
                                         <div className="clock-grids">
@@ -39,9 +39,9 @@ const Hero = (props) => {
             <div className="static-hero-right">
                 <div className="static-hero-img">
                     <div className="static-hero-img-inner">
-                        <img src={hImg3} alt="hImg3"/>
+                        <img src={require('../../../../feelings/src/images/wp.png')} alt="hImg3"/>
                     </div>
-                    <div className="static-hero-shape-1"><img src={hImg4} alt="hImg4"/></div>
+                    <div className="static-hero-shape-1"><img src='images/wp.png' alt="hImg4"/></div>
                     <div className="static-hero-shape-2"><img src={hImg5} alt="hImg5"/></div>
                 </div>
             </div>

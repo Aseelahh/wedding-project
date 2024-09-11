@@ -12,7 +12,7 @@ class CoupleSection extends Component {
                         <div className="col col-xs-12">
                             <div className="couple-area clearfix">
                                 <div className="text-grid bride">
-                                    <h3>Jessica Henry</h3>
+                                    <h3>Ifechukwu Chiedu</h3>
                                     <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                                     <div className="social">
                                         <ul>
@@ -24,11 +24,11 @@ class CoupleSection extends Component {
                                 </div>
                                 <div className="middle-couple-pic">
                                     <div className="middle-couple-pic-inner">
-                                        <img src={coupleImg1} alt=""/>
+                                        <img src={require('../../../../feelings/src/images/wp2.png')}alt=""/>
                                     </div>
                                 </div>
                                 <div className="text-grid groom">
-                                    <h3>Daniel Watson</h3>
+                                    <h3>Obinna Okeke</h3>
                                     <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                                     <div className="social">
                                         <ul>
