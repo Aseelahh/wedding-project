@@ -1,0 +1,20 @@
+import React, {Fragment} from 'react';
+import Navbar2 from '../../components/Navbar2'
+import PageTitle from '../../components/pagetitle'
+import Contactpage from '../../components/Contactpage'
+import Footer from '../../components/footer'
+import Scrollbar from '../../components/scrollbar'
+
+const ContactPage =() => {
+    return(
+        <Fragment>
+            <Navbar2/>
+            <PageTitle pageTitle={'Contact Us'} pagesub={'Contact'}/> 
+            <Contactpage/>
+            <Footer/>
+            <Scrollbar/>
+        </Fragment>
+    )
+};
+export default ContactPage;
+
