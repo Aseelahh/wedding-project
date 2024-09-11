@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import Grid from "@material-ui/core/Grid";
+import React, { useState } from 'react';
+import Grid from "@mui/material/Grid2";
 import SimpleReactValidator from "simple-react-validator";
-import {toast} from "react-toastify";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import {Link, useNavigate} from "react-router-dom";
+import { toast } from "react-toastify";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import { Link, useNavigate } from "react-router-dom";
 
 
 import './style.scss';
@@ -21,7 +21,7 @@ const SignUpPage = (props) => {
     });
 
     const changeHandler = (e) => {
-        setValue({...value, [e.target.name]: e.target.value});
+        setValue({ ...value, [e.target.name]: e.target.value });
         validator.showMessages();
     };
 
@@ -55,7 +55,7 @@ const SignUpPage = (props) => {
                 <p>Signup your account</p>
                 <form onSubmit={submitForm}>
                     <Grid container spacing={3}>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <TextField
                                 className="inputOutline"
                                 fullWidth
@@ -72,7 +72,7 @@ const SignUpPage = (props) => {
                             />
                             {validator.message('full name', value.full_name, 'required|alpha')}
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <TextField
                                 className="inputOutline"
                                 fullWidth
@@ -89,7 +89,7 @@ const SignUpPage = (props) => {
                             />
                             {validator.message('email', value.email, 'required|email')}
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <TextField
                                 className="inputOutline"
                                 fullWidth
@@ -106,7 +106,7 @@ const SignUpPage = (props) => {
                             />
                             {validator.message('password', value.password, 'required')}
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <TextField
                                 className="inputOutline"
                                 fullWidth
@@ -123,7 +123,7 @@ const SignUpPage = (props) => {
                             />
                             {validator.message('confirm password', value.confirm_password, `in:${value.password}`)}
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <Grid className="formFooter">
                                 <Button fullWidth className="cBtn cBtnLarge cBtnTheme" type="submit">Sign Up</Button>
                             </Grid>

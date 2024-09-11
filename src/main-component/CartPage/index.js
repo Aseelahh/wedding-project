@@ -1,12 +1,13 @@
-import React, { Fragment} from "react";
+import React, { Fragment } from "react";
 import Navbar2 from "../../components/Navbar2";
 import PageTitle from "../../components/pagetitle";
 import Footer from "../../components/footer";
 import Scrollbar from "../../components/scrollbar";
-import { Button, Grid } from "@material-ui/core";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid2";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import {totalPrice} from "../../utils";
+import { totalPrice } from "../../utils";
 import {
   removeFromCart,
   incrementQuantity,

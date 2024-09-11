@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import Grid from "@material-ui/core/Grid";
+import React, { useState } from 'react';
+import Grid from "@mui/material/Grid2";
 import SimpleReactValidator from "simple-react-validator";
-import {toast} from "react-toastify";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import {useNavigate} from "react-router-dom";
+import { toast } from "react-toastify";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 import './style.scss';
 
@@ -23,12 +23,12 @@ const CheckWrap = (props) => {
     });
 
     const changeHandler = (e) => {
-        setValue({...value, [e.target.name]: e.target.value});
+        setValue({ ...value, [e.target.name]: e.target.value });
         validator.showMessages();
     };
 
     const rememberHandler = () => {
-        setValue({...value, remember: !value.remember});
+        setValue({ ...value, remember: !value.remember });
     };
 
     const [validator] = React.useState(new SimpleReactValidator({
@@ -55,7 +55,7 @@ const CheckWrap = (props) => {
             if (email.match(userRegex)) {
                 toast.success('Order Recived sucessfully!');
                 push('/order_received');
-            }  else {
+            } else {
                 toast.info('user not existed!');
                 alert('user not existed! credential is : user@*****.com | vendor@*****.com | admin@*****.com');
             }
@@ -69,7 +69,7 @@ const CheckWrap = (props) => {
             <Grid>
                 <form onSubmit={submitForm}>
                     <Grid container spacing={3}>
-                        <Grid item sm={6} xs={12}>
+                        <Grid sm={6} xs={12}>
                             <TextField
                                 fullWidth
                                 label="Card holder Name"
@@ -83,7 +83,7 @@ const CheckWrap = (props) => {
                                 className="formInput radiusNone"
                             />
                         </Grid>
-                        <Grid item sm={6} xs={12}>
+                        <Grid sm={6} xs={12}>
                             <TextField
                                 fullWidth
                                 label="Card Number"
@@ -97,7 +97,7 @@ const CheckWrap = (props) => {
                                 className="formInput radiusNone"
                             />
                         </Grid>
-                        <Grid item sm={6} xs={12}>
+                        <Grid sm={6} xs={12}>
                             <TextField
                                 fullWidth
                                 label="CVV"
@@ -111,7 +111,7 @@ const CheckWrap = (props) => {
                                 className="formInput radiusNone"
                             />
                         </Grid>
-                        <Grid item sm={6} xs={12}>
+                        <Grid sm={6} xs={12}>
                             <TextField
                                 fullWidth
                                 label="Expire Date"
@@ -125,7 +125,7 @@ const CheckWrap = (props) => {
                                 className="formInput radiusNone"
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <Grid className="formFooter mt-20">
                                 <Button fullWidth className="cBtn cBtnLarge cBtnTheme mt-20 ml-15" type="submit">Proceed to Checkout</Button>
                             </Grid>

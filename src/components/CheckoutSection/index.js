@@ -1,23 +1,23 @@
-import React, {Fragment} from 'react';
-import Grid from "@material-ui/core/Grid";
-import Collapse from "@material-ui/core/Collapse";
+import React, { Fragment } from 'react';
+import Grid from "@mui/material/Grid2";
+import Collapse from "@mui/material/Collapse";
 import FontAwesome from "../../components/UiStyle/FontAwesome";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
-import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio from "@material-ui/core/Radio";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableRow from "@material-ui/core/TableRow";
-import TableCell from "@material-ui/core/TableCell";
-import {Link} from 'react-router-dom'
-import {totalPrice} from "../../utils";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import RadioGroup from "@mui/material/RadioGroup";
+import Radio from "@mui/material/Radio";
+import Table from "@mui/material/TableBody";
+import TableBody from "@mui/material/TableBody";
+import TableRow from "@mui/material/TableRow";
+import TableCell from "@mui/material/TableCell";
+import { Link } from 'react-router-dom'
+import { totalPrice } from "../../utils";
 
 // images
 import visa from '../../images/icon/visa.png';
@@ -49,7 +49,7 @@ const cardType = [
 ];
 
 
-const CheckoutSection = ({cartList}) => {
+const CheckoutSection = ({ cartList }) => {
     // states
     const [tabs, setExpanded] = React.useState({
         cupon: false,
@@ -99,7 +99,7 @@ const CheckoutSection = ({cartList}) => {
 
     // forms handler
     const changeHandler = e => {
-        setForms({...forms, [e.target.name]: e.target.value})
+        setForms({ ...forms, [e.target.name]: e.target.value })
     };
 
 
@@ -107,15 +107,15 @@ const CheckoutSection = ({cartList}) => {
         <Fragment>
             <Grid className="checkoutWrapper section-padding">
                 <Grid className="container" container spacing={3}>
-                    <Grid item md={6} xs={12}>
+                    <Grid md={6} xs={12}>
                         <div className="check-form-area">
                             <Grid className="cuponWrap checkoutCard">
                                 <Button className="collapseBtn" fullWidth onClick={() => faqHandler('cupon')}>
                                     Have a coupon ? Click here to enter your code.
-                                    <FontAwesome name={tabs.cupon ? 'minus' : 'plus'}/>
+                                    <FontAwesome name={tabs.cupon ? 'minus' : 'plus'} />
                                 </Button>
                                 <Collapse in={tabs.cupon} timeout="auto"
-                                        unmountOnExit>
+                                    unmountOnExit>
                                     <Grid className="chCardBody">
                                         <p>If you have coupon code,please apply it</p>
                                         <form className="cuponForm">
@@ -135,13 +135,13 @@ const CheckoutSection = ({cartList}) => {
                             <Grid className="cuponWrap checkoutCard">
                                 <Button className="collapseBtn" fullWidth onClick={() => faqHandler('billing_adress')}>
                                     Billing Address
-                                    <FontAwesome name={tabs.billing_adress ? 'minus' : 'plus'}/>
+                                    <FontAwesome name={tabs.billing_adress ? 'minus' : 'plus'} />
                                 </Button>
                                 <Collapse in={tabs.billing_adress} timeout="auto" unmountOnExit>
                                     <Grid className="chCardBody">
                                         <form className="cuponForm">
                                             <Grid container spacing={3}>
-                                                <Grid item sm={6} xs={12}>
+                                                <Grid sm={6} xs={12}>
                                                     <TextField
                                                         fullWidth
                                                         label="First Name"
@@ -155,7 +155,7 @@ const CheckoutSection = ({cartList}) => {
                                                         className="formInput radiusNone"
                                                     />
                                                 </Grid>
-                                                <Grid item sm={6} xs={12}>
+                                                <Grid sm={6} xs={12}>
                                                     <TextField
                                                         fullWidth
                                                         label="Last Name"
@@ -169,7 +169,7 @@ const CheckoutSection = ({cartList}) => {
                                                         className="formInput radiusNone"
                                                     />
                                                 </Grid>
-                                                <Grid item sm={6} xs={12}>
+                                                <Grid sm={6} xs={12}>
                                                     <InputLabel id="demo-simple-select-filled-label">Age</InputLabel>
                                                     <FormControl className="formSelect" fullWidth variant="filled">
                                                         <Select
@@ -188,7 +188,7 @@ const CheckoutSection = ({cartList}) => {
                                                         </Select>
                                                     </FormControl>
                                                 </Grid>
-                                                <Grid item sm={6} xs={12}>
+                                                <Grid sm={6} xs={12}>
                                                     <TextField
                                                         fullWidth
                                                         label="Dristrict"
@@ -202,7 +202,7 @@ const CheckoutSection = ({cartList}) => {
                                                         className="formInput radiusNone"
                                                     />
                                                 </Grid>
-                                                <Grid item xs={12}>
+                                                <Grid xs={12}>
                                                     <TextField
                                                         fullWidth
                                                         multiline
@@ -218,7 +218,7 @@ const CheckoutSection = ({cartList}) => {
                                                         className="formInput radiusNone"
                                                     />
                                                 </Grid>
-                                                <Grid item sm={6} xs={12}>
+                                                <Grid sm={6} xs={12}>
                                                     <TextField
                                                         fullWidth
                                                         label="Post Code"
@@ -232,7 +232,7 @@ const CheckoutSection = ({cartList}) => {
                                                         className="formInput radiusNone"
                                                     />
                                                 </Grid>
-                                                <Grid item sm={6} xs={12}>
+                                                <Grid sm={6} xs={12}>
                                                     <TextField
                                                         fullWidth
                                                         label="Email Adress"
@@ -246,7 +246,7 @@ const CheckoutSection = ({cartList}) => {
                                                         className="formInput radiusNone"
                                                     />
                                                 </Grid>
-                                                <Grid item xs={12}>
+                                                <Grid xs={12}>
                                                     <TextField
                                                         fullWidth
                                                         label="Phone No"
@@ -260,7 +260,7 @@ const CheckoutSection = ({cartList}) => {
                                                         className="formInput radiusNone"
                                                     />
                                                 </Grid>
-                                                <Grid item xs={12}>
+                                                <Grid xs={12}>
                                                     <FormControlLabel
                                                         className="checkBox"
                                                         control={
@@ -274,10 +274,10 @@ const CheckoutSection = ({cartList}) => {
                                                         label="Ship to a different address?"
                                                     />
                                                 </Grid>
-                                                <Grid item xs={12}>
+                                                <Grid xs={12}>
                                                     <Collapse in={dif_ship} timeout="auto" unmountOnExit>
                                                         <Grid container spacing={3}>
-                                                            <Grid item sm={6} xs={12}>
+                                                            <Grid sm={6} xs={12}>
                                                                 <TextField
                                                                     fullWidth
                                                                     label="First Name"
@@ -291,7 +291,7 @@ const CheckoutSection = ({cartList}) => {
                                                                     className="formInput radiusNone"
                                                                 />
                                                             </Grid>
-                                                            <Grid item sm={6} xs={12}>
+                                                            <Grid sm={6} xs={12}>
                                                                 <TextField
                                                                     fullWidth
                                                                     label="Last Name"
@@ -305,11 +305,11 @@ const CheckoutSection = ({cartList}) => {
                                                                     className="formInput radiusNone"
                                                                 />
                                                             </Grid>
-                                                            <Grid item sm={6} xs={12}>
+                                                            <Grid sm={6} xs={12}>
                                                                 <InputLabel
                                                                     id="demo-simple-select-filled-label">Age</InputLabel>
                                                                 <FormControl className="formSelect" fullWidth
-                                                                            variant="filled">
+                                                                    variant="filled">
                                                                     <Select
                                                                         labelId="demo-simple-select-filled-label"
                                                                         id="demo-simple-select-filled"
@@ -326,7 +326,7 @@ const CheckoutSection = ({cartList}) => {
                                                                     </Select>
                                                                 </FormControl>
                                                             </Grid>
-                                                            <Grid item sm={6} xs={12}>
+                                                            <Grid sm={6} xs={12}>
                                                                 <TextField
                                                                     fullWidth
                                                                     label="Dristrict"
@@ -340,7 +340,7 @@ const CheckoutSection = ({cartList}) => {
                                                                     className="formInput radiusNone"
                                                                 />
                                                             </Grid>
-                                                            <Grid item xs={12}>
+                                                            <Grid xs={12}>
                                                                 <TextField
                                                                     fullWidth
                                                                     multiline
@@ -356,7 +356,7 @@ const CheckoutSection = ({cartList}) => {
                                                                     className="formInput radiusNone"
                                                                 />
                                                             </Grid>
-                                                            <Grid item sm={6} xs={12}>
+                                                            <Grid sm={6} xs={12}>
                                                                 <TextField
                                                                     fullWidth
                                                                     label="Post Code"
@@ -370,7 +370,7 @@ const CheckoutSection = ({cartList}) => {
                                                                     className="formInput radiusNone"
                                                                 />
                                                             </Grid>
-                                                            <Grid item sm={6} xs={12}>
+                                                            <Grid sm={6} xs={12}>
                                                                 <TextField
                                                                     fullWidth
                                                                     label="Email Adress"
@@ -384,7 +384,7 @@ const CheckoutSection = ({cartList}) => {
                                                                     className="formInput radiusNone"
                                                                 />
                                                             </Grid>
-                                                            <Grid item xs={12}>
+                                                            <Grid xs={12}>
                                                                 <TextField
                                                                     fullWidth
                                                                     label="Phone No"
@@ -401,7 +401,7 @@ const CheckoutSection = ({cartList}) => {
                                                         </Grid>
                                                     </Collapse>
                                                 </Grid>
-                                                <Grid item xs={12}>
+                                                <Grid xs={12}>
                                                     <TextField
                                                         fullWidth
                                                         multiline
@@ -425,19 +425,19 @@ const CheckoutSection = ({cartList}) => {
                             <Grid className="cuponWrap checkoutCard">
                                 <Button className="collapseBtn" fullWidth onClick={() => faqHandler('payment')}>
                                     Payment Method
-                                    <FontAwesome name={tabs.payment ? 'minus' : 'plus'}/>
+                                    <FontAwesome name={tabs.payment ? 'minus' : 'plus'} />
                                 </Button>
                                 <Grid className="chCardBody">
                                     <Collapse in={tabs.payment} timeout="auto">
                                         <RadioGroup className="paymentMethod" aria-label="Payment Method"
-                                                    name="payment_method"
-                                                    value={forms.payment_method}
-                                                    onChange={(e) => changeHandler(e)}>
-                                            <FormControlLabel value="cash" control={<Radio color="primary"/>}
-                                                    label="Payment By Card "/>
-                                            <FormControlLabel value="card" control={<Radio color="primary"/>}
-                                                            label="Cash On delivery"/>
-                                            
+                                            name="payment_method"
+                                            value={forms.payment_method}
+                                            onChange={(e) => changeHandler(e)}>
+                                            <FormControlLabel value="cash" control={<Radio color="primary" />}
+                                                label="Payment By Card " />
+                                            <FormControlLabel value="card" control={<Radio color="primary" />}
+                                                label="Cash On delivery" />
+
                                         </RadioGroup>
                                         <Collapse in={forms.payment_method === 'cash'} timeout="auto">
                                             <Grid className="cardType">
@@ -445,13 +445,13 @@ const CheckoutSection = ({cartList}) => {
                                                     <Grid
                                                         key={i}
                                                         className={`cardItem ${forms.card_type === item.title ? 'active' : null}`}
-                                                        onClick={() => setForms({...forms, card_type: item.title})}>
-                                                        <img src={item.img} alt={item.title}/>
+                                                        onClick={() => setForms({ ...forms, card_type: item.title })}>
+                                                        <img src={item.img} alt={item.title} />
                                                     </Grid>
                                                 ))}
                                             </Grid>
                                             <Grid>
-                                                <CheckWrap/>
+                                                <CheckWrap />
                                             </Grid>
                                         </Collapse>
                                         <Collapse in={forms.payment_method === 'card'} timeout="auto">
@@ -464,10 +464,10 @@ const CheckoutSection = ({cartList}) => {
                             </Grid>
                         </div>
                     </Grid>
-                    <Grid item md={6} xs={12}>
+                    <Grid md={6} xs={12}>
                         <Grid className="cartStatus">
                             <Grid container spacing={3}>
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <Grid className="cartTotals">
                                         <h4>Cart Total</h4>
                                         <Table>
