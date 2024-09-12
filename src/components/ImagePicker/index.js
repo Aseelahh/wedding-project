@@ -65,7 +65,7 @@ const ImagePicker = () => {
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = () => {
-        const base64String = reader.result.split(",")[1];  // Extract base64 data
+        const base64String = reader.result.split(",")[1]; // Extract base64 data
         resolve(base64String);
       };
       reader.onerror = (error) => reject(error);
@@ -88,9 +88,11 @@ const ImagePicker = () => {
       "Content-Type: application/json\r\n\r\n" +
       JSON.stringify(metadata) +
       delimiter +
-      "Content-Type: " + file.type + "\r\n" +
+      "Content-Type: " +
+      file.type +
+      "\r\n" +
       "Content-Transfer-Encoding: base64\r\n\r\n" +
-      await fileToBase64(file) +
+      (await fileToBase64(file)) +
       closeDelimiter;
 
     return gapi.client.request({
@@ -143,25 +145,25 @@ const ImagePicker = () => {
 
           if (file.type.startsWith("image/")) {
             return (
-                <img
-                  key={index}
-                  src={url}
-                  alt={file.name}
-                  width="200"
-                  style={{ margin: "10px" }}
-                />
+              <img
+                key={index}
+                src={url}
+                alt={file.name}
+                width="200"
+                style={{ margin: "10px" }}
+              />
             );
           } else if (file.type.startsWith("video/")) {
             return (
-                <video
-                  key={index}
-                  width="300"
-                  controls
-                  style={{ margin: "10px" }}
-                >
-                  <source src={url} type={file.type} />
-                  Your browser does not support the video tag.
-                </video>
+              <video
+                key={index}
+                width="300"
+                controls
+                style={{ margin: "10px" }}
+              >
+                <source src={url} type={file.type} />
+                Your browser does not support the video tag.
+              </video>
             );
           }
 
