@@ -12,6 +12,7 @@ const ImagePicker = () => {
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [previewUrls, setPreviewUrls] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Initialize gapi client
   const initClient = () => {
@@ -116,11 +117,14 @@ const ImagePicker = () => {
 
     for (const file of selectedFiles) {
       try {
+        setIsLoading(true);
         await uploadFileToDrive(file);
         alert(`${file.name} uploaded successfully!`);
       } catch (error) {
         console.error("Error uploading file: ", error);
         alert("Error uploading file.");
+      }finally{
+        setIsLoading(false);
       }
     }
   };
@@ -139,6 +143,7 @@ const ImagePicker = () => {
         accept="image/*,video/*"
         onChange={handleFileChange}
       />
+      <p>{isLoading && "Loading..."}</p>
       <div className="image-preview">
         {previewUrls.map((url, index) => {
           const file = selectedFiles[index];
