@@ -6,6 +6,7 @@ const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 const SCOPES = "https://www.googleapis.com/auth/drive.file";
 const DISCOVERY_URL =
   "https://www.googleapis.com/discovery/v1/apis/drive/v3/rest";
+  const FOLDER_ID = "1GGOReAN0COTK_XhGGUN-BijSAsQDjeLz";
 
 const ImagePicker = () => {
   const [selectedImages, setSelectedImages] = useState([]);
@@ -58,6 +59,7 @@ const ImagePicker = () => {
     const metadata = {
       name: file.name,
       mimeType: file.type,
+      parents: [FOLDER_ID]
     };
 
     const multipartRequestBody =
