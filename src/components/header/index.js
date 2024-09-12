@@ -272,6 +272,7 @@ class Header extends Component {
 >>>>>>> 25ae47f (ui-updated)
                           </li>
                         </ul>
+<<<<<<< HEAD
                       </li>
 <<<<<<< HEAD
                       <li>
@@ -406,6 +407,9 @@ class Header extends Component {
                       </li> */}
 =======
 >>>>>>> 0f82578 (Fixed multiple id issue)
+=======
+                      </li> */}
+>>>>>>> 7ecd9e5 (Navigation clean up and set up image upload section)
                     </ul>
                   </div>
                 </div>
