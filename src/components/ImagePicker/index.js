@@ -4,6 +4,8 @@ import { gapi } from "gapi-script";
 const CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 const SCOPES = "https://www.googleapis.com/auth/drive.file";
+const DISCOVERY_URL =
+  "https://www.googleapis.com/discovery/v1/apis/drive/v3/rest";
 
 const ImagePicker = () => {
   const [selectedImages, setSelectedImages] = useState([]);
@@ -16,15 +18,16 @@ const ImagePicker = () => {
         .init({
           apiKey: API_KEY,
           clientId: CLIENT_ID,
-          discoveryDocs: [
-            "https://www.googleapis.com/discovery/v1/apis/drive/v3/rest",
-          ],
+          discoveryDocs: [DISCOVERY_URL],
           scope: SCOPES,
         })
         .then(() => {
           const authInstance = gapi.auth2.getAuthInstance();
           setIsSignedIn(authInstance.isSignedIn.get());
           authInstance.isSignedIn.listen(setIsSignedIn);
+        })
+        .catch((err) => {
+          console.log("Failed to initialize client auth2", err);
         });
     });
   };
