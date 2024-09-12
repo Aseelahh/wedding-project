@@ -11,6 +11,7 @@ import BlogSection from "../../components/BlogSection";
 import Scrollbar from "../../components/scrollbar";
 import PartnerSection from "../../components/PartnerSection";
 import Footer from "../../components/footer";
+import ImageUploadSection from "../../components/EventSection";
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
       <StorySection />
       <VideoSection />
       <PortfolioSection2 />
+      <ImageUploadSection />
       <RSVP />
       <EventSection />
       <PartnerSection />
