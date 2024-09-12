@@ -6,11 +6,12 @@ const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 const SCOPES = "https://www.googleapis.com/auth/drive.file";
 const DISCOVERY_URL =
   "https://www.googleapis.com/discovery/v1/apis/drive/v3/rest";
-  const FOLDER_ID = "1GGOReAN0COTK_XhGGUN-BijSAsQDjeLz";
+const FOLDER_ID = "1GGOReAN0COTK_XhGGUN-BijSAsQDjeLz";
 
 const ImagePicker = () => {
-  const [selectedImages, setSelectedImages] = useState([]);
   const [isSignedIn, setIsSignedIn] = useState(false);
+  const [selectedFiles, setSelectedFiles] = useState([]);
+  const [previewUrls, setPreviewUrls] = useState([]);
 
   // Initialize gapi client
   const initClient = () => {
@@ -45,10 +46,30 @@ const ImagePicker = () => {
     gapi.auth2.getAuthInstance().signOut();
   };
 
-  const handleImageChange = (e) => {
-    const files = Array.from(e.target.files);
-    const imageUrls = files.map((file) => URL.createObjectURL(file));
-    setSelectedImages(files); // Storing files for upload
+  const handleFileChange = (e) => {
+    const selectedFiles = Array.from(e.target.files);
+    setSelectedFiles(selectedFiles);
+
+    const previewUrls = selectedFiles.map((file) => URL.createObjectURL(file));
+    setPreviewUrls(previewUrls);
+  };
+
+  useEffect(() => {
+    return () => {
+      previewUrls.forEach((url) => URL.revokeObjectURL(url)); // Clean up memory
+    };
+  }, [previewUrls]);
+
+  const fileToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        const base64String = reader.result.split(",")[1];  // Extract base64 data
+        resolve(base64String);
+      };
+      reader.onerror = (error) => reject(error);
+    });
   };
 
   const uploadFileToDrive = async (file) => {
@@ -59,7 +80,7 @@ const ImagePicker = () => {
     const metadata = {
       name: file.name,
       mimeType: file.type,
-      parents: [FOLDER_ID]
+      parents: [FOLDER_ID],
     };
 
     const multipartRequestBody =
@@ -67,10 +88,9 @@ const ImagePicker = () => {
       "Content-Type: application/json\r\n\r\n" +
       JSON.stringify(metadata) +
       delimiter +
-      "Content-Type: " +
-      file.type +
-      "\r\n\r\n" +
-      file +
+      "Content-Type: " + file.type + "\r\n" +
+      "Content-Transfer-Encoding: base64\r\n\r\n" +
+      await fileToBase64(file) +
       closeDelimiter;
 
     return gapi.client.request({
@@ -92,7 +112,7 @@ const ImagePicker = () => {
       return;
     }
 
-    for (let file of selectedImages) {
+    for (const file of selectedFiles) {
       try {
         await uploadFileToDrive(file);
         alert(`${file.name} uploaded successfully!`);
@@ -114,19 +134,39 @@ const ImagePicker = () => {
       <input
         type="file"
         multiple
-        accept="image/*"
-        onChange={handleImageChange}
+        accept="image/*,video/*"
+        onChange={handleFileChange}
       />
       <div className="image-preview">
-        {selectedImages.map((image, index) => (
-          <div key={index} className="image-item">
-            <img
-              src={URL.createObjectURL(image)}
-              alt={`Selected ${index + 1}`}
-              style={{ maxWidth: "200px", maxHeight: "200px" }}
-            />
-          </div>
-        ))}
+        {previewUrls.map((url, index) => {
+          const file = selectedFiles[index];
+
+          if (file.type.startsWith("image/")) {
+            return (
+                <img
+                  key={index}
+                  src={url}
+                  alt={file.name}
+                  width="200"
+                  style={{ margin: "10px" }}
+                />
+            );
+          } else if (file.type.startsWith("video/")) {
+            return (
+                <video
+                  key={index}
+                  width="300"
+                  controls
+                  style={{ margin: "10px" }}
+                >
+                  <source src={url} type={file.type} />
+                  Your browser does not support the video tag.
+                </video>
+            );
+          }
+
+          return null;
+        })}
       </div>
       <button onClick={handleUpload}>Upload to Google Drive</button>
     </div>
