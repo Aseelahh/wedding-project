@@ -6,5 +6,33 @@
 .image-preview {
   display: flex;
   flex-wrap: wrap;
+<<<<<<< HEAD
   gap: 10px;
+=======
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image-item {
+  position: relative;
+  margin: 10px;
+}
+
+.image-item img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image-item button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+>>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
 }
