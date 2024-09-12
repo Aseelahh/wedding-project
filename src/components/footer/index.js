@@ -17,10 +17,9 @@ const Footer = (props) =>{
                     <div className="col col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                         <div className="widget about-widget">
                             <div className="logo widget-title">
-                                <Link onClick={ClickHandler} className="logo" to="/">Feel<span>i<i className="fa fa-heart" aria-hidden="true"></i></span>ngs</Link>
+                                <Link onClick={ClickHandler} className="logo" to="/">Ife<span>ego<i className="fa fa-heart" aria-hidden="true"></i></span>24</Link>
                             </div>
-                            <p>Welcome and open yourself to your truest love this year with us! With the Release
-                                Process</p>
+                            <p>Come celebrate with us!</p>
                             <ul>
                                 <li>
                                     <Link onClick={ClickHandler} to="/">
@@ -48,30 +47,30 @@ const Footer = (props) =>{
                     <div className="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12">
                         <div className="widget link-widget">
                             <div className="widget-title">
-                                <h3>Information</h3>
+                                <h3>R.S.V.P</h3>
                             </div>
                             <ul>
-                                <li><Link onClick={ClickHandler} to="/about">About Us</Link></li>
-                                <li><Link onClick={ClickHandler} to="/portfolio">Portfolio</Link></li>
-                                <li><Link onClick={ClickHandler} to="/blog">Latest News</Link></li>
-                                <li><Link onClick={ClickHandler} to="/contact">Contact us</Link></li>
-                                <li><Link onClick={ClickHandler} to="/service">Our Services</Link></li>
+                                <li><Link onClick={ClickHandler} to="/about">Dr Chike: 08054415474</Link></li>
+                                <li><Link onClick={ClickHandler} to="/portfolio">Dr Ebube: 08094204296</Link></li>
+                                {/* <li><Link onClick={ClickHandler} to="/blog">Latest News</Link></li>
+                                <li><Link onClick={ClickHandler} to="/contact">Contact us</Link></li> */}
+                                {/* <li><Link onClick={ClickHandler} to="/service">Our Services</Link></li> */}
                             </ul>
                         </div>
                     </div>
                     <div className="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12">
                         <div className="widget wpo-service-link-widget">
                             <div className="widget-title">
-                                <h3>Contact </h3>
+                                <h3>Coast </h3>
                             </div>
                             <div className="contact-ft">
-                                <p>Would you have any enquiries.Please feel free to contuct us</p>
-                                <ul>
+                                <p>Two are better than one, They get a good wage for their toil if one falls, other will help the fallen one. (Ecclesiastes 4: 9-10)</p>
+                                {/* <ul>
                                     <li><i className="fi flaticon-email"></i>Feelings@gmail.com</li>
                                     <li><i className="fi flaticon-phone-call"></i>+888 (123) 869523</li>
                                     <li><i className="fi flaticon-maps-and-flags"></i>New York – 1075 Firs Avenue
                                     </li>
-                                </ul>
+                                </ul> */}
                             </div>
                         </div>
                     </div>
@@ -91,7 +90,7 @@ const Footer = (props) =>{
                 </div>
             </div>
         </div>
-        <div className="wpo-lower-footer">
+        {/* <div className="wpo-lower-footer">
             <div className="container">
                 <div className="row">
                     <div className="col col-xs-12">
@@ -99,7 +98,7 @@ const Footer = (props) =>{
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
     </footer>
   )
 } 

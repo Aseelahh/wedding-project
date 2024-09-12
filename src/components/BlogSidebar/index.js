@@ -22,8 +22,8 @@ const BlogSidebar = (props) => {
                     <div className="img-holder">
                         <img src={about} alt=""/>
                     </div>
-                    <h4>Jenny Watson</h4>
-                    <p>Hi! beautiful people. I`m an authtor of this blog. Read our post - stay with us</p>
+                    <h4>#IFEEGO24</h4>
+                    <p>We're getting married!</p>
                     <div className="social">
                         <ul className="clearfix">
                             <li><Link onClick={ClickHandler} to="/blog-single/1"><i className="ti-facebook"></i></Link></li>
@@ -91,11 +91,11 @@ const BlogSidebar = (props) => {
                         <li><Link onClick={ClickHandler} to="/blog-single/1">bride & groom</Link></li>
                     </ul>
                 </div>
-                <div className="wpo-contact-widget widget">
+                {/* <div className="wpo-contact-widget widget">
                         <h2>How We Can <br/> Help You!</h2>
                         <p>labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                         <Link onClick={ClickHandler} to="/contact">Contact Us</Link>
-                </div>
+                </div> */}
             </div>
         </div>
      )
