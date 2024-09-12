@@ -29,7 +29,7 @@ class CoupleSection extends Component {
                                 </div>
                                 <div className="text-grid groom">
                                     <h3>Obinna Okeke</h3>
-                                    <p>I did not think any day could surpass the day I met her in being the best day of my life but it is second only to the day she agreed to be my wife. It's a few days to our wedding, rather than thinking if i'm doing the right thing, i wish i asked her earlier. I love you ❤️.</p>
+                                    <p>I did not think any day could surpass the day I met her in being the best day of my life but it is second only to the day she agreed to be my wife. It's a few days to our wedding, rather than thinking if i'm doing the right thing, i wish i asked her earlier. I love you Nkem ❤️.</p>
                                     <div className="social">
                                         <ul>
                                             <li><Link to="/"><i className="ti-facebook"></i></Link></li>
