@@ -37,7 +37,7 @@ const EventSection = (props) => {
   return (
     <section
       className={`wpo-event-section section-padding ${props.eClass}`}
-      id="image-upload"
+      id="events"
     >
       <div className="container">
         <SectionTitle MainTitle={"TIME AND PLACE"} />
@@ -69,4 +69,4 @@ const EventSection = (props) => {
   );
 };
 
-export default ImageUploadSection;
+export default EventSection;

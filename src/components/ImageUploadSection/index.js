@@ -1,6 +1,7 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ImagePicker from "../ImagePicker";
 
 const ImageUploadSection = (props) => {
@@ -18,37 +19,18 @@ import sImg1 from "../../images/event/1.jpg";
 import sImg2 from "../../images/event/2.jpg";
 import sImg3 from "../../images/event/3.jpg";
 import LocationMap from "../LocationMap";
+=======
+import ImagePicker from "../ImagePicker";
+>>>>>>> 046d4d6 (First image upload done. Fixing image not showing in cloud)
 
-const Events = [
-  {
-    Simg: sImg1,
-    title: "White Wedding ",
-    li1: "Saturday, 14 Sep, 2024 11:00 AM – 1:00 PM",
-    li2: "St Peter Claver Catholic Church, Ajao Estate, Lagos",
-  },
-  {
-    Simg: sImg2,
-    title: "RECEPTION",
-    li1: "Saturday, 14 Sep, 2024   1:00 PM – 4:00 PM",
-    li2: "Pleasant Event Center Obanta Avenue, off Ajao Str, Adeniyi Jones, Ikeja Lagos",
-  },
-
-  {
-    Simg: sImg3,
-    title: "AFTER PARTY",
-    li1: "Saturday, 14 Sep, 2024   4:00 PM – 9:00 PM",
-    li2: "Pleasant Event Center Obanta Avenue, off Ajao Str, Adeniyi Jones, Ikeja Lagos",
-  }
-  
-];
-
-const EventSection = (props) => {
+const ImageUploadSection = (props) => {
   return (
     <section
       className={`wpo-event-section section-padding ${props.eClass}`}
-      id="events"
+      id="image-upload"
     >
       <div className="container">
+<<<<<<< HEAD
         <SectionTitle MainTitle={"TIME AND PLACE"} />
         <div className="wpo-event-wrap">
           <div className="row">
@@ -73,6 +55,11 @@ const EventSection = (props) => {
             ))}
           </div>
 >>>>>>> 7ecd9e5 (Navigation clean up and set up image upload section)
+=======
+        <SectionTitle MainTitle={"Upload Captured Images"} />
+        <div>
+          <ImagePicker />
+>>>>>>> 046d4d6 (First image upload done. Fixing image not showing in cloud)
         </div>
       </div>
     </section>
@@ -80,7 +67,11 @@ const EventSection = (props) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ImageUploadSection;
 =======
 export default EventSection;
 >>>>>>> 7ecd9e5 (Navigation clean up and set up image upload section)
+=======
+export default ImageUploadSection;
+>>>>>>> 046d4d6 (First image upload done. Fixing image not showing in cloud)

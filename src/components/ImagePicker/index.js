@@ -4,7 +4,6 @@ import { gapi } from "gapi-script";
 const CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 const SCOPES = "https://www.googleapis.com/auth/drive.file";
-<<<<<<< HEAD
 const DISCOVERY_URL =
   "https://www.googleapis.com/discovery/v1/apis/drive/v3/rest";
 const FOLDER_ID = "1GGOReAN0COTK_XhGGUN-BijSAsQDjeLz";
@@ -14,12 +13,6 @@ const ImagePicker = () => {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [previewUrls, setPreviewUrls] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-=======
-
-const ImagePicker = () => {
-  const [selectedImages, setSelectedImages] = useState([]);
-  const [isSignedIn, setIsSignedIn] = useState(false);
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
 
   // Initialize gapi client
   const initClient = () => {
@@ -28,25 +21,16 @@ const ImagePicker = () => {
         .init({
           apiKey: API_KEY,
           clientId: CLIENT_ID,
-<<<<<<< HEAD
           discoveryDocs: [DISCOVERY_URL],
-=======
-          discoveryDocs: [
-            "https://www.googleapis.com/discovery/v1/apis/drive/v3/rest",
-          ],
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
           scope: SCOPES,
         })
         .then(() => {
           const authInstance = gapi.auth2.getAuthInstance();
           setIsSignedIn(authInstance.isSignedIn.get());
           authInstance.isSignedIn.listen(setIsSignedIn);
-<<<<<<< HEAD
         })
         .catch((err) => {
           console.log("Failed to initialize client auth2", err);
-=======
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
         });
     });
   };
@@ -63,7 +47,6 @@ const ImagePicker = () => {
     gapi.auth2.getAuthInstance().signOut();
   };
 
-<<<<<<< HEAD
   const handleFileChange = (e) => {
     const selectedFiles = Array.from(e.target.files);
     setSelectedFiles(selectedFiles);
@@ -88,12 +71,6 @@ const ImagePicker = () => {
       };
       reader.onerror = (error) => reject(error);
     });
-=======
-  const handleImageChange = (e) => {
-    const files = Array.from(e.target.files);
-    const imageUrls = files.map((file) => URL.createObjectURL(file));
-    setSelectedImages(files); // Storing files for upload
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
   };
 
   const uploadFileToDrive = async (file) => {
@@ -104,10 +81,7 @@ const ImagePicker = () => {
     const metadata = {
       name: file.name,
       mimeType: file.type,
-<<<<<<< HEAD
       parents: [FOLDER_ID],
-=======
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
     };
 
     const multipartRequestBody =
@@ -117,14 +91,9 @@ const ImagePicker = () => {
       delimiter +
       "Content-Type: " +
       file.type +
-<<<<<<< HEAD
       "\r\n" +
       "Content-Transfer-Encoding: base64\r\n\r\n" +
       (await fileToBase64(file)) +
-=======
-      "\r\n\r\n" +
-      file +
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
       closeDelimiter;
 
     return gapi.client.request({
@@ -146,24 +115,16 @@ const ImagePicker = () => {
       return;
     }
 
-<<<<<<< HEAD
     for (const file of selectedFiles) {
       try {
         setIsLoading(true);
-=======
-    for (let file of selectedImages) {
-      try {
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
         await uploadFileToDrive(file);
         alert(`${file.name} uploaded successfully!`);
       } catch (error) {
         console.error("Error uploading file: ", error);
         alert("Error uploading file.");
-<<<<<<< HEAD
-      }finally{
+      } finally {
         setIsLoading(false);
-=======
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
       }
     }
   };
@@ -179,7 +140,6 @@ const ImagePicker = () => {
       <input
         type="file"
         multiple
-<<<<<<< HEAD
         accept="image/*,video/*"
         onChange={handleFileChange}
       />
@@ -214,21 +174,6 @@ const ImagePicker = () => {
 
           return null;
         })}
-=======
-        accept="image/*"
-        onChange={handleImageChange}
-      />
-      <div className="image-preview">
-        {selectedImages.map((image, index) => (
-          <div key={index} className="image-item">
-            <img
-              src={URL.createObjectURL(image)}
-              alt={`Selected ${index + 1}`}
-              style={{ maxWidth: "200px", maxHeight: "200px" }}
-            />
-          </div>
-        ))}
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
       </div>
       <button onClick={handleUpload}>Upload to Google Drive</button>
     </div>
