@@ -3,9 +3,15 @@ import Navbar from "../../components/Navbar";
 import Hero2 from "../../components/hero2";
 import StorySection from "../../components/StorySection";
 import CoupleSection2 from "../../components/CoupleSection2";
+<<<<<<< HEAD
 // import VideoSection from "../../components/VideoSection";
 // import PortfolioSection2 from "../../components/PortfolioSection2";
 import EventSection from "../../components/EventSection";
+=======
+import VideoSection from "../../components/VideoSection";
+import PortfolioSection2 from "../../components/PortfolioSection2";
+import EventSection from "../../components/ImageUploadSection";
+>>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
 import RSVP from "../../components/RSVP";
 // import BlogSection from "../../components/BlogSection";
 import Scrollbar from "../../components/scrollbar";
