@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Homepage from '../HomePage'
 import Homepage2 from '../HomePage2'
@@ -40,7 +40,6 @@ import SignUpPage from '../SignUpPage'
 import ForgotPassword from '../ForgotPassword'
 
 const AllRoute = () => {
-
   return (
     <div className="App">
       <BrowserRouter>
@@ -85,9 +84,8 @@ const AllRoute = () => {
           <Route path='forgot-password' element={<ForgotPassword/>} />
         </Routes>
       </BrowserRouter>
-
     </div>
   );
-}
+};
 
 export default AllRoute;

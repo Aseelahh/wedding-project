@@ -193,11 +193,13 @@ class Header extends Component {
                             </ul>
                           </li>
                         </ul>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
-                <div className="col-lg-3 col-md-2 col-2">
+
+                {/* --- Remove mini cart and search --- */}
+                {/* <div className="col-lg-3 col-md-2 col-2">
                   <div className="header-right">
                     <div className="header-search-form-wrapper">
                       <div className="cart-search-contact">
@@ -233,6 +235,7 @@ class Header extends Component {
                         </div>
                       </div>
                     </div>
+
                     <div className="mini-cart">
                       <button
                         onClick={this.cartHandler}
@@ -311,7 +314,7 @@ class Header extends Component {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </nav>
