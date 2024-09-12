@@ -10,6 +10,7 @@ import EventSection from "../../components/ImageUploadSection";
 import Scrollbar from "../../components/scrollbar";
 import PartnerSection from "../../components/PartnerSection";
 import Footer from "../../components/footer";
+import ImageUploadSection from "../../components/EventSection";
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
       {/* <VideoSection /> */}
       <PortfolioSection2 />
       {/* <RSVP /> */}
+      <ImageUploadSection />
       <EventSection />
       {/* <PartnerSection />
        <BlogSection /> */}

@@ -76,6 +76,9 @@ const menus = [
         id: 266,
         title: "Groomsmen",
         link: "/Groomsmen",
+        id: 255,
+        title: "Image Upload",
+        link: "/image-upload",
       },
       {
         id: 258,

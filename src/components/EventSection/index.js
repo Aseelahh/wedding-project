@@ -37,7 +37,7 @@ const EventSection = (props) => {
   return (
     <section
       className={`wpo-event-section section-padding ${props.eClass}`}
-      id="events"
+      id="image-upload"
     >
       <div className="container">
         <SectionTitle MainTitle={"TIME AND PLACE"} />

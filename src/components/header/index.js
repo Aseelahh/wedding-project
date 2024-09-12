@@ -5,7 +5,10 @@ import min3 from "../../images/love.png";
 import { removeFromCart } from "../../store/actions/action";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import HeaderTopbar from "../HeaderTopbar";
+import { totalPrice } from "../../utils";
 import { totalPrice } from "../../utils";
 
 class Header extends Component {
@@ -13,14 +16,21 @@ class Header extends Component {
     isSearchShow: false,
     isCartShow: false,
   };
+  };
 
   searchHandler = () => {
     this.setState({
       isSearchShow: !this.state.isSearchShow,
     });
   };
+      isSearchShow: !this.state.isSearchShow,
+    });
+  };
   cartHandler = () => {
     this.setState({
+      isCartShow: !this.state.isCartShow,
+    });
+  };
       isCartShow: !this.state.isCartShow,
     });
   };
@@ -31,9 +41,12 @@ class Header extends Component {
     const SubmitHandler = (e) => {
       e.preventDefault();
     };
+      e.preventDefault();
+    };
 
     const ClickHandler = () => {
       window.scrollTo(10, 0);
+    };
     };
 
     const { carts } = this.props;
@@ -57,15 +70,22 @@ class Header extends Component {
                       className="navbar-brand logo"
                       to="/home"
                     >
-                      Ife
+                      Feel
                       <span>
-                        ego<i className="fa fa-heart" aria-hidden="true"></i>
+                        i<i className="fa fa-heart" aria-hidden="true"></i>
                       </span>
-                      24
+                      ngs
                     </NavLink>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-1 col-1">
+                  <div
+                    id="navbar"
+                    className="collapse navbar-collapse navigation-holder"
+                  >
+                    <button className="menu-close">
+                      <i className="ti-close"></i>
+                    </button>
                   <div
                     id="navbar"
                     className="collapse navbar-collapse navigation-holder"
@@ -84,19 +104,44 @@ class Header extends Component {
                         >
                           Home
                         </Link>
+                        <Link
+                          activeClass="active"
+                          to="home"
+                          spy={true}
+                          smooth={true}
+                          duration={500}
+                        >
+                          Home
+                        </Link>
                         <ul className="sub-menu">
                           <li>
                             <NavLink onClick={ClickHandler} to="/home">
                               Main Home
                             </NavLink>
                           </li>
-                          {/* <li><NavLink onClick={ClickHandler} to="/home2">Announcement S1</NavLink></li>
-                          <li><NavLink onClick={ClickHandler} to="/home3">Announcement S2</NavLink></li>
-                          <li><NavLink onClick={ClickHandler} to="/home4">Wedding Planner</NavLink></li>
-                          <li><NavLink onClick={ClickHandler} to="/home5">Shop Home</NavLink></li> */}
+                          {/* <li>
+                            <NavLink onClick={ClickHandler} to="/home2">
+                              Announcement S1
+                            </NavLink>
+                          </li>
                           <li>
-                            <NavLink onClick={ClickHandler} to="/groom-bride">
-                              Bridesmaids and Groomsmen
+                            <NavLink onClick={ClickHandler} to="/home3">
+                              Announcement S2
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink onClick={ClickHandler} to="/home4">
+                              Wedding Planner
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink onClick={ClickHandler} to="/home5">
+                              Shop Home
+                            </NavLink>
+                          </li> */}
+                          <li>
+                            <NavLink onClick={ClickHandler} to="/home6">
+                              Invitation
                             </NavLink>
                           </li>
                         </ul>
@@ -135,10 +180,47 @@ class Header extends Component {
                           Gallery
                         </Link>
                       </li>
-                      {/* <li><Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500} >RSVP</Link></li>
-                      <li><Link activeClass="active" to="events" spy={true} smooth={true} offset={-80} duration={500} >Events</Link></li> */}
-                      <li className="menu-item-has-children">
-                        {/* <NavLink onClick={ClickHandler} to="/blog">Blog</NavLink> */}
+                      <li>
+                        <Link
+                          activeClass="active"
+                          to="image-upload"
+                          spy={true}
+                          smooth={true}
+                          duration={500}
+                        >
+                          Image Upload
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          activeClass="active"
+                          to="RSVP"
+                          spy={true}
+                          smooth={true}
+                          duration={500}
+                        >
+                          RSVP
+                        </Link>
+                      </li>
+                      {/* --- Remove Events. Might be added back --- */}
+                      {/* <li>
+                        <Link
+                          activeClass="active"
+                          to="events"
+                          spy={true}
+                          smooth={true}
+                          offset={-80}
+                          duration={500}
+                        >
+                          Events
+                        </Link>
+                      </li> */}
+
+                      {/* --- Remove Blog. Not needed --- */}
+                      {/* <li className="menu-item-has-children">
+                        <NavLink onClick={ClickHandler} to="/blog">
+                          Blog
+                        </NavLink>
                         <ul className="sub-menu">
                           <li>
                             <NavLink onClick={ClickHandler} to="/blog">
@@ -193,11 +275,13 @@ class Header extends Component {
                             </ul>
                           </li>
                         </ul>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
-                <div className="col-lg-3 col-md-2 col-2">
+
+                {/* --- Remove mini cart and search --- */}
+                {/* <div className="col-lg-3 col-md-2 col-2">
                   <div className="header-right">
                     <div className="header-search-form-wrapper">
                       <div className="cart-search-contact">
@@ -213,6 +297,7 @@ class Header extends Component {
                             }`}
                           ></i>
                         </button>
+
                         <div
                           className={`header-search-form ${
                             isSearchShow ? "header-search-content-toggle" : ""
@@ -228,11 +313,20 @@ class Header extends Component {
                               <button type="submit">
                                 <i className="fi flaticon-search"></i>
                               </button>
+                              <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Search here..."
+                              />
+                              <button type="submit">
+                                <i className="fi flaticon-search"></i>
+                              </button>
                             </div>
                           </form>
                         </div>
                       </div>
                     </div>
+
                     <div className="mini-cart">
                       <button
                         onClick={this.cartHandler}
@@ -242,6 +336,9 @@ class Header extends Component {
                         <i className="fi flaticon-shopping-cart"></i>{" "}
                       </button>
                       <div
+                        className={`mini-cart-content ${
+                          isCartShow ? "mini-cart-content-toggle" : ""
+                        }`}
                         className={`mini-cart-content ${
                           isCartShow ? "mini-cart-content-toggle" : ""
                         }`}
@@ -260,6 +357,10 @@ class Header extends Component {
                                 className="mini-cart-item clearfix"
                                 key={crt}
                               >
+                              <div
+                                className="mini-cart-item clearfix"
+                                key={crt}
+                              >
                                 <div className="mini-cart-item-image">
                                   <span>
                                     <img src={cart.proImg} alt="icon" />
@@ -268,6 +369,7 @@ class Header extends Component {
                                 <div className="mini-cart-item-des">
                                   <p>{cart.title} </p>
                                   <span className="mini-cart-item-price">
+                                    ${cart.price} x {cart.qty}
                                     ${cart.price} x {cart.qty}
                                   </span>
                                   <span className="mini-cart-item-quantity">
@@ -294,8 +396,18 @@ class Header extends Component {
                               to="/checkout"
                               className="view-cart-btn s1"
                             >
+                            <NavLink
+                              onClick={ClickHandler}
+                              to="/checkout"
+                              className="view-cart-btn s1"
+                            >
                               Checkout
                             </NavLink>
+                            <NavLink
+                              onClick={ClickHandler}
+                              to="/cart"
+                              className="view-cart-btn"
+                            >
                             <NavLink
                               onClick={ClickHandler}
                               to="/cart"
@@ -311,12 +423,13 @@ class Header extends Component {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </nav>
         </div>
       </header>
+    );
     );
   }
 }
