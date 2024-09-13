@@ -23,17 +23,9 @@ class Header2 extends Component {
   };
 
   render() {
-    const { isSearchShow, isCartShow } = this.state;
-
-    const SubmitHandler = (e) => {
-      e.preventDefault();
-    };
-
     const ClickHandler = () => {
       window.scrollTo(10, 0);
     };
-
-    const { carts } = this.props;
 
     return (
       <header id="header" className={this.props.topbarBlock}>

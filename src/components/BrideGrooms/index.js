@@ -17,13 +17,6 @@ import timg14 from "../../images/GM7.jpeg";
 import timg15 from "../../images/GM2.jpeg";
 import timg16 from "../../images/GM.jpeg";
 import timg17 from "../../images/GM4.jpeg";
-import timg11 from "../../images/GM3.jpeg";
-import timg12 from "../../images/GM5.jpeg";
-import timg13 from "../../images/GM6.jpeg";
-import timg14 from "../../images/GM7.jpeg";
-import timg15 from "../../images/GM2.jpeg";
-import timg16 from "../../images/GM.jpeg";
-import timg17 from "../../images/GM4.jpeg";
 
 const Brides = [
   {

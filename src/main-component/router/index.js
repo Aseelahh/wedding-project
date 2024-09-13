@@ -30,34 +30,6 @@ import LoginPage from "../LoginPage";
 import SignUpPage from "../SignUpPage";
 import ForgotPassword from "../ForgotPassword";
 import ImageUploadPage from "../ImageUploadPage";
-import Homepage from "../HomePage";
-import Homepage2 from "../HomePage2";
-import HomePage3 from "../HomePage3";
-import HomePage4 from "../HomePage4";
-import HomePage5 from "../HomePage5";
-import HomePage6 from "../HomePage6";
-import TeamSinglePage from "../TeamSinglePage";
-import AboutPage from "../AboutPage";
-import StoryPage from "../StoryPage";
-import RSVPPage from "../RSVPPage";
-import GalleryPage from "../GalleryPage";
-import PlannerPage from "../PlannerPage";
-import BrideGroomPage from "../BrideGroomPage";
-import ShopPage from "../ShopPage";
-import CheckoutPage from "../CheckoutPage";
-import CartPage from "../CartPage";
-import OrderRecived from "../OrderRecived";
-import ProjectSinglePage from "../ProjectSinglePage";
-import ErrorPage from "../ErrorPage";
-import ContactPage from "../ContactPage";
-import ProductSinglePage from "../ProductSinglePage";
-import ServicePage from "../ServicePage";
-import SeviceSinglePage from "../SeviceSinglePage";
-import PricingPage from "../PricingPage";
-import ComingSoonPage from "../ComingSoonPage";
-import LoginPage from "../LoginPage";
-import SignUpPage from "../SignUpPage";
-import ForgotPassword from "../ForgotPassword";
 
 const AllRoute = () => {
   return (
