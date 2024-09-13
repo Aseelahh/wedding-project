@@ -39,7 +39,7 @@ class Header extends Component {
     const { carts } = this.props;
 
     return (
-      <header id="header" className={this.props.topbarBlock}>
+      <header id="header" className={this.props.topbarBlock} id="home">
         <HeaderTopbar />
         <div className={`wpo-site-header ${this.props.hclass}`}>
           <nav className="navigation navbar navbar-expand-lg navbar-light">
@@ -193,13 +193,11 @@ class Header extends Component {
                             </ul>
                           </li>
                         </ul>
-                      </li>{" "}
+                      </li>
                     </ul>
                   </div>
                 </div>
-
-                {/* --- Remove mini cart and search --- */}
-                {/* <div className="col-lg-3 col-md-2 col-2">
+                <div className="col-lg-3 col-md-2 col-2">
                   <div className="header-right">
                     <div className="header-search-form-wrapper">
                       <div className="cart-search-contact">
@@ -235,7 +233,6 @@ class Header extends Component {
                         </div>
                       </div>
                     </div>
-
                     <div className="mini-cart">
                       <button
                         onClick={this.cartHandler}
@@ -314,7 +311,7 @@ class Header extends Component {
                       </div>
                     </div>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </nav>

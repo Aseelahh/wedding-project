@@ -11,6 +11,13 @@ import timg7 from "../../images/Folla.jpeg";
 import timg8 from "../../images/Moyo.jpeg";
 import timg9 from "../../images/Onyinbéke.jpeg";
 import timg10 from "../../images/Chinelo.jpeg";
+import timg11 from "../../images/GM3.jpeg";
+import timg12 from "../../images/GM5.jpeg";
+import timg13 from "../../images/GM6.jpeg";
+import timg14 from "../../images/GM7.jpeg";
+import timg15 from "../../images/GM2.jpeg";
+import timg16 from "../../images/GM.jpeg";
+import timg17 from "../../images/GM4.jpeg";
 // import VideoSection from "../VideoSection";
 
 const Brides = [
@@ -83,16 +90,40 @@ const Grooms = [
     title: "Friend",
   },
   {
-    id: "1",
-    tImg: timg9,
-    name: "Maria D’Soza",
-    title: "Brother",
+    id: "12",
+    tImg: timg12,
+    name: "Hills",
+    title: "Friend",
   },
   {
-    id: "1",
-    tImg: timg10,
-    name: "Maria D’Soza",
-    title: "Brother",
+    id: "13",
+    tImg: timg13,
+    name: "Ezinna",
+    title: "Friend",
+  },
+  {
+    id: "14",
+    tImg: timg14,
+    name: "Sanchez",
+    title: "Friend",
+  },
+  {
+    id: "15",
+    tImg: timg15,
+    name: "Odogwu",
+    title: "Friend",
+  },
+  {
+    id: "16",
+    tImg: timg16,
+    name: "CJ",
+    title: "Friend",
+  },
+  {
+    id: "17",
+    tImg: timg17,
+    name: "Pablo",
+    title: "Friend",
   },
 ];
 

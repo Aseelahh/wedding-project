@@ -1,8 +1,8 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
-import sImg1 from "../../images/event/1.jpg";
-import sImg2 from "../../images/event/2.jpg";
-import sImg3 from "../../images/event/3.jpg";
+import sImg1 from "../../images/TWP.png";
+import sImg2 from "../../images/RTN.png";
+import sImg3 from "../../images/AFTER.png";
 import LocationMap from "../LocationMap";
 
 const Events = [
