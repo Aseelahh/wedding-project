@@ -8,7 +8,7 @@ import TeamSection from '../../components/team';
 import Testimonial from '../../components/Testimonial';
 import PricingSection from '../../components/PricingSection';
 import PartnerSection from '../../components/PartnerSection';
-import BlogSection from '../../components/BlogSection';
+// import BlogSection from '../../components/BlogSection';
 import ProjectSection from '../../components/ProjectSection';
 import Scrollbar from '../../components/scrollbar'
 import Footer from '../../components/footer';
@@ -29,7 +29,7 @@ const HomePage4 =() => {
             <Testimonial/>
             <PricingSection/>
             <PartnerSection/>
-            <BlogSection/>
+            {/* <BlogSection/> */}
             <Footer/>
             <Scrollbar/>
         </Fragment>

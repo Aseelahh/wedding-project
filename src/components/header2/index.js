@@ -52,7 +52,7 @@ class Header2 extends Component {
                 </div>
                 <div className="col-lg-3 col-md-6 col-6">
                   <div className="navbar-header">
-                    <Link onClick={ClickHandler} className="navbar-brand logo" to="/home">Feel<span>i<i className="fa fa-heart" aria-hidden="true"></i></span>ngs</Link>
+                    <Link onClick={ClickHandler} className="navbar-brand logo" to="/home">Ife<span>ego<i className="fa fa-heart" aria-hidden="true"></i></span>24</Link>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-1 col-1">
@@ -63,14 +63,14 @@ class Header2 extends Component {
                         <Link onClick={ClickHandler} to="/">Home</Link>
                         <ul className="sub-menu">
                           <li><Link onClick={ClickHandler} to="/home">Main Home</Link></li>
-                          <li><Link onClick={ClickHandler} to="/home2">Announcement S1</Link></li>
+                          {/* <li><Link onClick={ClickHandler} to="/home2">Announcement S1</Link></li>
                           <li><Link onClick={ClickHandler} to="/home3">Announcement S2</Link></li>
                           <li><Link onClick={ClickHandler} to="/home4">Wedding Planner</Link></li>
-                          <li><Link onClick={ClickHandler} to="/home5">Shop Home</Link></li>
-                          <li><Link onClick={ClickHandler} to="/home6">Invitation</Link></li>
+                          <li><Link onClick={ClickHandler} to="/home5">Shop Home</Link></li> */}
+                          {/* <li><Link onClick={ClickHandler} to="/home6">Invitation</Link></li> */}
                         </ul>
                       </li>
-                      <li className="menu-item-has-children">
+                      {/* <li className="menu-item-has-children">
                         <Link to="/">Pages</Link>
                         <ul className="sub-menu">
                           <li><Link onClick={ClickHandler} to="/about">About</Link></li>
@@ -89,16 +89,16 @@ class Header2 extends Component {
                           <li><Link onClick={ClickHandler} to="/login">Login</Link></li>
                           <li><Link onClick={ClickHandler} to="/register">Register</Link></li>
                         </ul>
-                      </li>
-                      <li className="menu-item-has-children">
+                      </li> */}
+                      {/* <li className="menu-item-has-children">
                         <Link to="/portfolio-grid">Portfolio</Link>
                         <ul className="sub-menu">
                           <li><Link to="/portfolio-grid">Portfolio Grid</Link></li>
                           <li><Link to="/portfolio-masonary">Portfolio Masonary</Link></li>
                           <li><Link to="/project-single/1">Portfolio Single</Link></li>
                         </ul>
-                      </li>
-                      <li className="menu-item-has-children">
+                      </li> */}
+                      {/* <li className="menu-item-has-children">
                         <Link to="/shop">Shop</Link>
                         <ul className="sub-menu">
                           <li><Link onClick={ClickHandler} to="/shop">Shop</Link></li>
@@ -106,8 +106,8 @@ class Header2 extends Component {
                           <li><Link onClick={ClickHandler} to="/cart">Cart</Link></li>
                           <li><Link onClick={ClickHandler} to="/checkout">Checkout</Link></li>
                         </ul>
-                      </li>
-                      <li className="menu-item-has-children">
+                      </li> */}
+                      {/* <li className="menu-item-has-children">
                         <Link onClick={ClickHandler} to="/blog">Blog</Link>
                         <ul className="sub-menu">
                           <li><Link onClick={ClickHandler} to="/blog">Blog right sidebar</Link></li>
@@ -125,13 +125,13 @@ class Header2 extends Component {
                             </ul>
                           </li>
                         </ul>
-                      </li>
-                      <li><Link onClick={ClickHandler} to="/contact">Contact</Link></li>
+                      </li> */}
+                      {/* <li><Link onClick={ClickHandler} to="/contact">Contact</Link></li> */}
                     </ul>
 
                   </div>
                 </div>
-                <div className="col-lg-3 col-md-2 col-2">
+                {/* <div className="col-lg-3 col-md-2 col-2">
                   <div className="header-right">
                     <div className="header-search-form-wrapper">
                       <div className="cart-search-contact">
@@ -216,7 +216,7 @@ class Header2 extends Component {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </nav>

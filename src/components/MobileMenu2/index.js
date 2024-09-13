@@ -74,8 +74,8 @@ const menus = [
             },
             {
                 id: 266,
-                title: 'Planners',
-                link: '/planner'
+                title: 'Groomsmen',
+                link: '/Groomsmen'
             },
             {
                 id: 258,

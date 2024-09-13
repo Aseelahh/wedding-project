@@ -41,7 +41,7 @@ const Hero = (props) => {
                     <div className="static-hero-img-inner">
                         <img src={require('../../../../feelings/src/images/wp.png')} alt="hImg3"/>
                     </div>
-                    <div className="static-hero-shape-1"><img src='images/wp.png' alt="hImg4"/></div>
+                    <div className="static-hero-shape-1"><img src={hImg4} alt="hImg4"/></div>
                     <div className="static-hero-shape-2"><img src={hImg5} alt="hImg5"/></div>
                 </div>
             </div>

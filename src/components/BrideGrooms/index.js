@@ -1,41 +1,79 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import SectionTitle from "../SectionTitle";
-import timg1 from '../../images/team/img-1.jpg'
-import timg2 from '../../images/team/img-2.jpg'
-import timg3 from '../../images/team/img-3.jpg'
-import timg4 from '../../images/team/img-4.jpg'
-import timg5 from '../../images/team/img-5.jpg'
-import timg6 from '../../images/team/img-6.jpg'
-import timg7 from '../../images/team/img-7.jpg'
-import timg8 from '../../images/team/img-8.jpg'
-import VideoSection from "../VideoSection";
+import timg1 from '../../images/Aisha.jpeg'
+import timg2 from '../../images/Etom.jpeg'
+import timg3 from '../../images/Amala.jpeg'
+import timg4 from '../../images/Ololade.jpeg'
+import timg5 from '../../images/Mo.jpeg'
+import timg6 from '../../images/Nehylow.jpeg'
+import timg7 from '../../images/Folla.jpeg'
+import timg8 from '../../images/Moyo.jpeg'
+import timg9 from '../../images/Onyinbéke.jpeg'
+import timg10 from '../../images/Chinelo.jpeg'
+// import VideoSection from "../VideoSection";
 
 const Brides = [
   {
     id:'1',
     tImg:timg1,
-    name:'Maria D’Soza',
-    title:'Sister',     
+    name:'Aisha',
+    title:'Friend',     
  },
  {
     id:'2',
     tImg:timg2,
-    name:'John Abraham',
-    title:'Best Friend',     
+    name:'Etom',
+    title:'Sister',     
  },
  {
     id:'3',
     tImg:timg3,
-    name:'Elizabeth Anny',
-    title:'Sister',     
+    name:'Amala',
+  title:'Cousin',     
  },
  {
     id:'4',
     tImg:timg4,
-    name:'Robert Willy',
-    title:'Brother',     
- }
+    name:'Ololade',
+    title:'Friend',     
+ },
+ {
+  id:'5',
+  tImg:timg5,
+  name:'Mo',
+  title:'Friend',     
+},
+{
+  id:'6',
+  tImg:timg6,
+  name:'Nehylow',
+  title:'Friend',     
+},
+{
+  id:'7',
+  tImg:timg7,
+  name:'Follaa',
+  title:'Friend',     
+},
+{
+  id:'8',
+  tImg:timg8,
+  name:'Moyo',
+  title:'Friend',     
+},
+{
+  id:'9',
+  tImg:timg9,
+  name:'Onyinbéke',
+  title:'Friend',     
+},
+{
+  id:'10',
+  tImg:timg10,  
+  name:'Chinelo',
+  title:'Friend',   
+},
 ]
 const Grooms = [
   {
@@ -61,7 +99,19 @@ const Grooms = [
     tImg:timg8,
     name:'Robert Willy',
     title:'Friend',     
- }
+ },
+ {
+  id:'1',
+  tImg:timg9,
+  name:'Maria D’Soza',
+  title:'Brother',     
+},
+{
+  id:'1',
+  tImg:timg10,
+  name:'Maria D’Soza',
+  title:'Brother',     
+},
 ]
 
 
@@ -77,7 +127,7 @@ const BrideGrooms = (props) => {
           <SectionTitle MainTitle={'Bridesmaids'} />
           <div className="wpo-team-wrap">
             <div className="row">
-              {Brides.slice(0, 6).map((Bride, tm) => (
+              {Brides.slice(0, 11).map((Bride, tm) => (
                 <div className="col-lg-3 col-md-4 col-sm-6 col-12" key={tm}>
                     <div className="wpo-team-item">
                       <div className="wpo-team-img">
@@ -86,12 +136,12 @@ const BrideGrooms = (props) => {
                       <div className="wpo-team-text">
                         <h3>{Bride.name}</h3>
                         <span>{Bride.title}</span>
-                        <ul>
+                        {/* <ul>
                           <li><Link onClick={ClickHandler} to="/"> <i className="ti-facebook"></i></Link></li>
                           <li><Link onClick={ClickHandler} to="/"> <i className="ti-twitter-alt"></i></Link></li>
                           <li><Link onClick={ClickHandler} to="/"> <i className="ti-linkedin"></i></Link></li>
                           <li><Link onClick={ClickHandler} to="/"> <i className="ti-instagram"></i></Link></li>
-                        </ul>
+                        </ul> */}
                       </div>
                     </div>
                 </div>
@@ -100,7 +150,7 @@ const BrideGrooms = (props) => {
           </div>
         </div>
       </div>
-      <VideoSection/>
+      {/* <VideoSection/> */}
       <div className="wpo-team-section pt-120 section-padding">
         <div className="container">
           <SectionTitle MainTitle={'Groomsmen'} />
@@ -115,12 +165,12 @@ const BrideGrooms = (props) => {
                       <div className="wpo-team-text">
                         <h3>{Groom.name}</h3>
                         <span>{Groom.title}</span>
-                        <ul>
+                        {/* <ul>
                           <li><Link onClick={ClickHandler} to="/"> <i className="ti-facebook"></i></Link></li>
                           <li><Link onClick={ClickHandler} to="/"> <i className="ti-twitter-alt"></i></Link></li>
                           <li><Link onClick={ClickHandler} to="/"> <i className="ti-linkedin"></i></Link></li>
                           <li><Link onClick={ClickHandler} to="/"> <i className="ti-instagram"></i></Link></li>
-                        </ul>
+                        </ul> */}
                       </div>
                     </div>
                 </div>
