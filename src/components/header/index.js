@@ -52,6 +52,7 @@ class Header extends Component {
                 </div>
                 <div className="col-lg-3 col-md-6 col-6">
                   <div className="navbar-header">
+<<<<<<< HEAD
                     <NavLink
                       onClick={ClickHandler}
                       className="navbar-brand logo"
@@ -63,6 +64,9 @@ class Header extends Component {
                       </span>
                       24
                     </NavLink>
+=======
+                    <NavLink onClick={ClickHandler} className="navbar-brand logo" to="/home">Ife<span>ego<i className="fa fa-heart" aria-hidden="true"></i></span>24</NavLink>
+>>>>>>> 2143ceb (ui-updated)
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-1 col-1">
@@ -85,15 +89,20 @@ class Header extends Component {
                           Home
                         </Link>
                         <ul className="sub-menu">
+<<<<<<< HEAD
                           <li>
                             <NavLink onClick={ClickHandler} to="/home">
                               Main Home
                             </NavLink>
                           </li>
+=======
+                          <li><NavLink onClick={ClickHandler} to="/home">Main Home</NavLink></li>
+>>>>>>> 2143ceb (ui-updated)
                           {/* <li><NavLink onClick={ClickHandler} to="/home2">Announcement S1</NavLink></li>
                           <li><NavLink onClick={ClickHandler} to="/home3">Announcement S2</NavLink></li>
                           <li><NavLink onClick={ClickHandler} to="/home4">Wedding Planner</NavLink></li>
                           <li><NavLink onClick={ClickHandler} to="/home5">Shop Home</NavLink></li> */}
+<<<<<<< HEAD
                           <li>
                             <NavLink onClick={ClickHandler} to="/groom-bride">
                               Bridesmaids and Groomsmen
@@ -135,6 +144,14 @@ class Header extends Component {
                           Gallery
                         </Link>
                       </li>
+=======
+                          <li><NavLink onClick={ClickHandler} to="/groom-bride">Bridesmaids and Groomsmen</NavLink></li>
+                        </ul>
+                      </li>
+                      <li><Link activeClass="active" to="couple" spy={true} smooth={true} offset={-100} duration={500} >Couple</Link></li>
+                      <li><Link activeClass="active" to="story" spy={true} smooth={true} duration={500} >Story</Link></li>
+                      <li><Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500} >Gallery</Link></li>
+>>>>>>> 2143ceb (ui-updated)
                       {/* <li><Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500} >RSVP</Link></li>
                       <li><Link activeClass="active" to="events" spy={true} smooth={true} offset={-80} duration={500} >Events</Link></li> */}
                       <li className="menu-item-has-children">

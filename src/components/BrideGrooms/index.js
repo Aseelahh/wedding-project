@@ -11,6 +11,7 @@ import timg7 from '../../images/Folla.jpeg'
 import timg8 from '../../images/Moyo.jpeg'
 import timg9 from '../../images/Onyinbéke.jpeg'
 import timg10 from '../../images/Chinelo.jpeg'
+<<<<<<< HEAD
 import timg11 from '../../images/GM3.jpeg'
 import timg12 from '../../images/GM5.jpeg'
 import timg13 from '../../images/GM6.jpeg'
@@ -18,6 +19,8 @@ import timg14 from '../../images/GM7.jpeg'
 import timg15 from '../../images/GM2.jpeg'
 import timg16 from '../../images/GM.jpeg'
 import timg17 from '../../images/GM4.jpeg'
+=======
+>>>>>>> 2143ceb (ui-updated)
 // import VideoSection from "../VideoSection";
 
 const Brides = [
@@ -90,6 +93,7 @@ const Grooms = [
     title:'Friend',     
  },
  {
+<<<<<<< HEAD
     id:'12',
     tImg:timg12,
     name:'Hills',
@@ -124,6 +128,18 @@ const Grooms = [
   tImg:timg17,
   name:'Pablo',
   title:'Friend',     
+=======
+  id:'1',
+  tImg:timg9,
+  name:'Maria D’Soza',
+  title:'Brother',     
+},
+{
+  id:'1',
+  tImg:timg10,
+  name:'Maria D’Soza',
+  title:'Brother',     
+>>>>>>> 2143ceb (ui-updated)
 },
 ]
 

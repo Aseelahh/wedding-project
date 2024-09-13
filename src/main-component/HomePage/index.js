@@ -22,6 +22,10 @@ const HomePage = () => {
       <StorySection />
       {/* <VideoSection /> */}
       <PortfolioSection2 />
+<<<<<<< HEAD
+=======
+      <ImageUploadSection />
+>>>>>>> 2143ceb (ui-updated)
       {/* <RSVP /> */}
       <EventSection />
       {/* <PartnerSection />
