@@ -4,7 +4,7 @@ import Hero from "../../components/hero";
 import StorySection from "../../components/StorySection";
 import CoupleSection from "../../components/CoupleSection";
 import PortfolioSection2 from "../../components/PortfolioSection2";
-import EventSection from "../../components/ImageUploadSection";
+import EventSection from "../../components/EventSection";
 import Scrollbar from "../../components/scrollbar";
 import Footer from "../../components/footer";
 import ImageUploadSection from "../../components/ImageUploadSection";
