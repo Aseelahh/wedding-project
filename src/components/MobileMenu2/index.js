@@ -44,6 +44,7 @@ const menus = [
 
   {
     id: 2,
+<<<<<<< HEAD
     title: "Pages",
     link: "/",
     submenu: [
@@ -128,6 +129,89 @@ const menus = [
     ],
   },
   {
+=======
+        title: 'Pages',
+        link: '/',
+        submenu: [
+            {
+                id: 21,
+                title: 'About',
+                link: '/about'
+            },
+            {
+                id: 22,
+                title: 'Our story',
+                link: '/story'
+            },
+            {
+                id: 23,
+                title: 'Accomodation',
+                link: '/accomodation'
+            },
+            {
+                id: 24,
+                title: 'RSVP',
+                link: '/404'
+            },
+            {
+                id: 255,
+                title: 'Gallery',
+                link: '/gallery'
+            },
+            {
+                id: 266,
+                title: 'Groomsmen',
+                link: '/Groomsmen'
+            },
+            {
+                id: 258,
+                title: 'Planner Single',
+                link: '/team-single/1'
+            },
+            {
+                id: 267,
+                title: 'Bridesmaid & Groomsman',
+                link: '/groom-bride'
+            },
+            {
+                id: 253,
+                title: 'Serevice',
+                link: '/service'
+            },
+            {
+                id: 27,
+                title: 'Serevice Single',
+                link: '/service-single/1'
+            },
+            {
+                id: 28,
+                title: 'Pricing',
+                link: '/pricing'
+            },
+            {
+                id: 29,
+                title: 'coming',
+                link: '/coming'
+            },
+            {
+                id: 221,
+                title: '404 Error',
+                link: '/404'
+            },
+            {
+                id: 251,
+                title: 'Login',
+                link: '/login'
+            },
+            {
+                id: 262,
+                title: 'Register',
+                link: '/register'
+            },
+        ]
+    },
+{
+>>>>>>> 25ae47f (ui-updated)
     id: 4,
     title: "Portfolio",
     link: "/portfolio-grid",

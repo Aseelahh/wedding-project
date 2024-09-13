@@ -3,17 +3,9 @@ import Navbar from "../../components/Navbar";
 import Hero from "../../components/hero";
 import StorySection from "../../components/StorySection";
 import CoupleSection from "../../components/CoupleSection";
-// import VideoSection from "../../components/VideoSection";
 import PortfolioSection2 from "../../components/PortfolioSection2";
 import EventSection from "../../components/ImageUploadSection";
-<<<<<<< HEAD
-// import BlogSection from "../../components/BlogSection";
-=======
-import RSVP from "../../components/RSVP";
-import BlogSection from "../../components/BlogSection";
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
 import Scrollbar from "../../components/scrollbar";
-import PartnerSection from "../../components/PartnerSection";
 import Footer from "../../components/footer";
 import ImageUploadSection from "../../components/ImageUploadSection";
 
@@ -24,13 +16,9 @@ const HomePage = () => {
       <Hero />
       <CoupleSection />
       <StorySection />
-      {/* <VideoSection /> */}
       <PortfolioSection2 />
-      {/* <RSVP /> */}
       <ImageUploadSection />
       <EventSection />
-      {/* <PartnerSection />
-       <BlogSection /> */}
       <Footer />
       <Scrollbar />
     </Fragment>
