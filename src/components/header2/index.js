@@ -38,7 +38,7 @@ class Header2 extends Component {
     const { carts } = this.props;
 
     return (
-      <header id="header" className={this.props.topbarBlock} id="home">
+      <header id="header" className={this.props.topbarBlock}>
         <HeaderTopbar />
         <div className={`wpo-site-header ${this.props.hclass}`} id="home">
           <nav className="navigation navbar navbar-expand-lg navbar-light">
