@@ -66,11 +66,15 @@ class Header extends Component {
                 <div className="col-lg-3 col-md-6 col-6">
                   <div className="navbar-header">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0f82578 (Fixed multiple id issue)
                     <NavLink
                       onClick={ClickHandler}
                       className="navbar-brand logo"
                       to="/home"
                     >
+<<<<<<< HEAD
                       Feel
                       <span>
                         i<i className="fa fa-heart" aria-hidden="true"></i>
@@ -80,6 +84,14 @@ class Header extends Component {
 =======
                     <NavLink onClick={ClickHandler} className="navbar-brand logo" to="/home">Ife<span>ego<i className="fa fa-heart" aria-hidden="true"></i></span>24</NavLink>
 >>>>>>> 25ae47f (ui-updated)
+=======
+                      Ife
+                      <span>
+                        ego<i className="fa fa-heart" aria-hidden="true"></i>
+                      </span>
+                      24
+                    </NavLink>
+>>>>>>> 0f82578 (Fixed multiple id issue)
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-1 col-1">
@@ -119,11 +131,15 @@ class Header extends Component {
                         </Link>
                         <ul className="sub-menu">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0f82578 (Fixed multiple id issue)
                           <li>
                             <NavLink onClick={ClickHandler} to="/home">
                               Main Home
                             </NavLink>
                           </li>
+<<<<<<< HEAD
                           {/* <li>
                             <NavLink onClick={ClickHandler} to="/home2">
                               Announcement S1
@@ -150,38 +166,114 @@ class Header extends Component {
                             </NavLink>
 =======
                           <li><NavLink onClick={ClickHandler} to="/home">Main Home</NavLink></li>
+=======
+>>>>>>> 0f82578 (Fixed multiple id issue)
                           {/* <li><NavLink onClick={ClickHandler} to="/home2">Announcement S1</NavLink></li>
                           <li><NavLink onClick={ClickHandler} to="/home3">Announcement S2</NavLink></li>
                           <li><NavLink onClick={ClickHandler} to="/home4">Wedding Planner</NavLink></li>
                           <li><NavLink onClick={ClickHandler} to="/home5">Shop Home</NavLink></li> */}
-                          <li><NavLink onClick={ClickHandler} to="/groom-bride">Bridesmaids and Groomsmen</NavLink></li>
+                          <li>
+                            <NavLink onClick={ClickHandler} to="/groom-bride">
+                              Bridesmaids and Groomsmen
+                            </NavLink>
+                          </li>
                         </ul>
                       </li>
-                      <li><Link activeClass="active" to="couple" spy={true} smooth={true} offset={-100} duration={500} >Couple</Link></li>
-                      <li><Link activeClass="active" to="story" spy={true} smooth={true} duration={500} >Story</Link></li>
-                      <li><Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500} >Gallery</Link></li>
+                      <li>
+                        <Link
+                          activeClass="active"
+                          to="couple"
+                          spy={true}
+                          smooth={true}
+                          offset={-100}
+                          duration={500}
+                        >
+                          Couple
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          activeClass="active"
+                          to="story"
+                          spy={true}
+                          smooth={true}
+                          duration={500}
+                        >
+                          Story
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          activeClass="active"
+                          to="gallery"
+                          spy={true}
+                          smooth={true}
+                          duration={500}
+                        >
+                          Gallery
+                        </Link>
+                      </li>
                       {/* <li><Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500} >RSVP</Link></li>
                       <li><Link activeClass="active" to="events" spy={true} smooth={true} offset={-80} duration={500} >Events</Link></li> */}
                       <li className="menu-item-has-children">
                         {/* <NavLink onClick={ClickHandler} to="/blog">Blog</NavLink> */}
                         <ul className="sub-menu">
-                          <li><NavLink onClick={ClickHandler} to="/blog">Blog right sidebar</NavLink></li>
-                          <li><NavLink onClick={ClickHandler} to="/blog-left-sidebar">Blog left sidebar</NavLink></li>
-                          <li><NavLink onClick={ClickHandler} to="/blog-fullwidth">Blog fullwidth</NavLink></li>
+                          <li>
+                            <NavLink onClick={ClickHandler} to="/blog">
+                              Blog right sidebar
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              onClick={ClickHandler}
+                              to="/blog-left-sidebar"
+                            >
+                              Blog left sidebar
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              onClick={ClickHandler}
+                              to="/blog-fullwidth"
+                            >
+                              Blog fullwidth
+                            </NavLink>
+                          </li>
                           <li className="menu-item-has-children">
-                            <NavLink onClick={ClickHandler} to="/">Blog details</NavLink>
+                            <NavLink onClick={ClickHandler} to="/">
+                              Blog details
+                            </NavLink>
                             <ul className="sub-menu">
-                              <li><NavLink onClick={ClickHandler} to="/blog-single/1">Blog details right sidebar</NavLink>
+                              <li>
+                                <NavLink
+                                  onClick={ClickHandler}
+                                  to="/blog-single/1"
+                                >
+                                  Blog details right sidebar
+                                </NavLink>
                               </li>
-                              <li><NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">Blog details left
-                                sidebar</NavLink></li>
-                              <li><NavLink onClick={ClickHandler} to="/blog-single-fullwidth/1">Blog details
-                                fullwidth</NavLink></li>
+                              <li>
+                                <NavLink
+                                  onClick={ClickHandler}
+                                  to="/blog-single-left-sidebar/1"
+                                >
+                                  Blog details left sidebar
+                                </NavLink>
+                              </li>
+                              <li>
+                                <NavLink
+                                  onClick={ClickHandler}
+                                  to="/blog-single-fullwidth/1"
+                                >
+                                  Blog details fullwidth
+                                </NavLink>
+                              </li>
                             </ul>
 >>>>>>> 25ae47f (ui-updated)
                           </li>
                         </ul>
                       </li>
+<<<<<<< HEAD
                       <li>
                         <Link
                           activeClass="active"
@@ -312,6 +404,8 @@ class Header extends Component {
                           </li>
                         </ul>
                       </li> */}
+=======
+>>>>>>> 0f82578 (Fixed multiple id issue)
                     </ul>
                   </div>
                 </div>
@@ -333,7 +427,10 @@ class Header extends Component {
                             }`}
                           ></i>
                         </button>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0f82578 (Fixed multiple id issue)
                         <div
                           className={`header-search-form ${
                             isSearchShow ? "header-search-content-toggle" : ""
