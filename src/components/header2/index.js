@@ -5,64 +5,84 @@ import min3 from "../../images/love.png";
 import { removeFromCart } from "../../store/actions/action";
 import { Link } from "react-router-dom";
 import HeaderTopbar from "../HeaderTopbar";
-import {totalPrice} from "../../utils";
-
+import { totalPrice } from "../../utils";
 
 class Header2 extends Component {
   state = {
     isSearchShow: false,
     isCartShow: false,
-  }
+  };
 
   searchHandler = () => {
     this.setState({
-      isSearchShow: !this.state.isSearchShow
-    })
-  }
+      isSearchShow: !this.state.isSearchShow,
+    });
+  };
   cartHandler = () => {
     this.setState({
-      isCartShow: !this.state.isCartShow
-    })
-  }
+      isCartShow: !this.state.isCartShow,
+    });
+  };
 
   render() {
     const { isSearchShow, isCartShow } = this.state;
 
     const SubmitHandler = (e) => {
-      e.preventDefault()
-    }
+      e.preventDefault();
+    };
 
     const ClickHandler = () => {
       window.scrollTo(10, 0);
-    }
+    };
 
     const { carts } = this.props;
 
     return (
-      <header id="header" className={this.props.topbarBlock} id="home">
-        <HeaderTopbar/>
-        <div className={`wpo-site-header ${this.props.hclass}`} id="home">
+      <header id="header" className={this.props.topbarBlock}>
+        <HeaderTopbar />
+        <div className={`wpo-site-header ${this.props.hclass}`}>
           <nav className="navigation navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">
               <div className="row align-items-center">
                 <div className="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
                   <div className="mobail-menu">
-                    <MobileMenu2/>
+                    <MobileMenu2 />
                   </div>
                 </div>
                 <div className="col-lg-3 col-md-6 col-6">
                   <div className="navbar-header">
-                    <Link onClick={ClickHandler} className="navbar-brand logo" to="/home">Ife<span>ego<i className="fa fa-heart" aria-hidden="true"></i></span>24</Link>
+                    <Link
+                      onClick={ClickHandler}
+                      className="navbar-brand logo"
+                      to="/home"
+                    >
+                      Ife
+                      <span>
+                        ego<i className="fa fa-heart" aria-hidden="true"></i>
+                      </span>
+                      24
+                    </Link>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-1 col-1">
-                  <div id="navbar" className="collapse navbar-collapse navigation-holder">
-                    <button className="menu-close"><i className="ti-close"></i></button>
+                  <div
+                    id="navbar"
+                    className="collapse navbar-collapse navigation-holder"
+                  >
+                    <button className="menu-close">
+                      <i className="ti-close"></i>
+                    </button>
                     <ul className="nav navbar-nav mb-2 mb-lg-0">
                       <li className="menu-item-has-children">
-                        <Link onClick={ClickHandler} to="/">Home</Link>
+                        <Link onClick={ClickHandler} to="/">
+                          Home
+                        </Link>
                         <ul className="sub-menu">
-                          <li><Link onClick={ClickHandler} to="/home">Main Home</Link></li>
+                          <li>
+                            <Link onClick={ClickHandler} to="/home">
+                              Main Home
+                            </Link>
+                          </li>
                           {/* <li><Link onClick={ClickHandler} to="/home2">Announcement S1</Link></li>
                           <li><Link onClick={ClickHandler} to="/home3">Announcement S2</Link></li>
                           <li><Link onClick={ClickHandler} to="/home4">Wedding Planner</Link></li>
@@ -128,7 +148,6 @@ class Header2 extends Component {
                       </li> */}
                       {/* <li><Link onClick={ClickHandler} to="/contact">Contact</Link></li> */}
                     </ul>
-
                   </div>
                 </div>
                 {/* <div className="col-lg-3 col-md-2 col-2">
@@ -222,7 +241,7 @@ class Header2 extends Component {
           </nav>
         </div>
       </header>
-    )
+    );
   }
 }
 
