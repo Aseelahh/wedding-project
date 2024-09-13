@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import SectionTitle from "../SectionTitle";
 import timg1 from "../../images/Aisha.jpeg";
 import timg2 from "../../images/Etom.jpeg";
@@ -154,12 +153,6 @@ const BrideGrooms = (props) => {
                     <div className="wpo-team-text">
                       <h3>{Bride.name}</h3>
                       <span>{Bride.title}</span>
-                      {/* <ul>
-                          <li><Link onClick={ClickHandler} to="/"> <i className="ti-facebook"></i></Link></li>
-                          <li><Link onClick={ClickHandler} to="/"> <i className="ti-twitter-alt"></i></Link></li>
-                          <li><Link onClick={ClickHandler} to="/"> <i className="ti-linkedin"></i></Link></li>
-                          <li><Link onClick={ClickHandler} to="/"> <i className="ti-instagram"></i></Link></li>
-                        </ul> */}
                     </div>
                   </div>
                 </div>
@@ -168,7 +161,6 @@ const BrideGrooms = (props) => {
           </div>
         </div>
       </div>
-      {/* <VideoSection/> */}
       <div className="wpo-team-section pt-120 section-padding">
         <div className="container">
           <SectionTitle MainTitle={"Groomsmen"} />
@@ -183,12 +175,6 @@ const BrideGrooms = (props) => {
                     <div className="wpo-team-text">
                       <h3>{Groom.name}</h3>
                       <span>{Groom.title}</span>
-                      {/* <ul>
-                          <li><Link onClick={ClickHandler} to="/"> <i className="ti-facebook"></i></Link></li>
-                          <li><Link onClick={ClickHandler} to="/"> <i className="ti-twitter-alt"></i></Link></li>
-                          <li><Link onClick={ClickHandler} to="/"> <i className="ti-linkedin"></i></Link></li>
-                          <li><Link onClick={ClickHandler} to="/"> <i className="ti-instagram"></i></Link></li>
-                        </ul> */}
                     </div>
                   </div>
                 </div>

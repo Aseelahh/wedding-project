@@ -14,37 +14,11 @@ const menus = [
         title: "Main Home",
         link: "/home",
       },
-      {
-        id: 13,
-        title: "Announcement S1",
-        link: "/home2",
-      },
-      {
-        id: 14,
-        title: "Announcement S2",
-        link: "/home3",
-      },
-      {
-        id: 12,
-        title: "Wedding Planner",
-        link: "/home4",
-      },
-      {
-        id: 16,
-        title: "Shop Home",
-        link: "/home5",
-      },
-      {
-        id: 17,
-        title: "Invitation",
-        link: "/home6",
-      },
     ],
   },
 
   {
     id: 2,
-<<<<<<< HEAD
     title: "Pages",
     link: "/",
     submenu: [
@@ -58,16 +32,7 @@ const menus = [
         title: "Our story",
         link: "/story",
       },
-      {
-        id: 23,
-        title: "Accomodation",
-        link: "/accomodation",
-      },
-      {
-        id: 24,
-        title: "RSVP",
-        link: "/404",
-      },
+
       {
         id: 255,
         title: "Gallery",
@@ -77,232 +42,18 @@ const menus = [
         id: 266,
         title: "Groomsmen",
         link: "/Groomsmen",
-        id: 255,
-        title: "Image Upload",
-        link: "/image-upload",
       },
       {
-        id: 258,
-        title: "Planner Single",
-        link: "/team-single/1",
+        id: 299,
+        title: "Image Upload",
+        link: "/image-upload",
       },
       {
         id: 267,
         title: "Bridesmaid & Groomsman",
         link: "/groom-bride",
       },
-      {
-        id: 253,
-        title: "Serevice",
-        link: "/service",
-      },
-      {
-        id: 27,
-        title: "Serevice Single",
-        link: "/service-single/1",
-      },
-      {
-        id: 28,
-        title: "Pricing",
-        link: "/pricing",
-      },
-      {
-        id: 29,
-        title: "coming",
-        link: "/coming",
-      },
-      {
-        id: 221,
-        title: "404 Error",
-        link: "/404",
-      },
-      {
-        id: 251,
-        title: "Login",
-        link: "/login",
-      },
-      {
-        id: 262,
-        title: "Register",
-        link: "/register",
-      },
     ],
-  },
-  {
-=======
-        title: 'Pages',
-        link: '/',
-        submenu: [
-            {
-                id: 21,
-                title: 'About',
-                link: '/about'
-            },
-            {
-                id: 22,
-                title: 'Our story',
-                link: '/story'
-            },
-            {
-                id: 23,
-                title: 'Accomodation',
-                link: '/accomodation'
-            },
-            {
-                id: 24,
-                title: 'RSVP',
-                link: '/404'
-            },
-            {
-                id: 255,
-                title: 'Gallery',
-                link: '/gallery'
-            },
-            {
-                id: 266,
-                title: 'Groomsmen',
-                link: '/Groomsmen'
-            },
-            {
-                id: 258,
-                title: 'Planner Single',
-                link: '/team-single/1'
-            },
-            {
-                id: 267,
-                title: 'Bridesmaid & Groomsman',
-                link: '/groom-bride'
-            },
-            {
-                id: 253,
-                title: 'Serevice',
-                link: '/service'
-            },
-            {
-                id: 27,
-                title: 'Serevice Single',
-                link: '/service-single/1'
-            },
-            {
-                id: 28,
-                title: 'Pricing',
-                link: '/pricing'
-            },
-            {
-                id: 29,
-                title: 'coming',
-                link: '/coming'
-            },
-            {
-                id: 221,
-                title: '404 Error',
-                link: '/404'
-            },
-            {
-                id: 251,
-                title: 'Login',
-                link: '/login'
-            },
-            {
-                id: 262,
-                title: 'Register',
-                link: '/register'
-            },
-        ]
-    },
-{
->>>>>>> 25ae47f (ui-updated)
-    id: 4,
-    title: "Portfolio",
-    link: "/portfolio-grid",
-    submenu: [
-      {
-        id: 41,
-        title: "Portfolio Grid",
-        link: "/portfolio-grid",
-      },
-      {
-        id: 42,
-        title: "Portfolio Masonary",
-        link: "/portfolio-masonary",
-      },
-      {
-        id: 44,
-        title: "Portfolio Single",
-        link: "/project-single/1",
-      },
-    ],
-  },
-
-  {
-    id: 7,
-    title: "Shop",
-    link: "/shop",
-    submenu: [
-      {
-        id: 71,
-        title: "Shop",
-        link: "/shop",
-      },
-      {
-        id: 75,
-        title: "Shop Single",
-        link: "/product-single/1",
-      },
-      {
-        id: 76,
-        title: "Cart",
-        link: "/cart",
-      },
-      {
-        id: 77,
-        title: "Checkout",
-        link: "/checkout",
-      },
-    ],
-  },
-
-  {
-    id: 5,
-    title: "Blog",
-    link: "/blog",
-    submenu: [
-      {
-        id: 51,
-        title: "Blog",
-        link: "/blog",
-      },
-      {
-        id: 52,
-        title: "Blog Left sidebar",
-        link: "/blog-left",
-      },
-      {
-        id: 53,
-        title: "Blog full width",
-        link: "/blog-fullwidth",
-      },
-      {
-        id: 54,
-        title: "Blog single",
-        link: "/blog-single/1",
-      },
-      {
-        id: 55,
-        title: "Blog single Left sidebar",
-        link: "/blog-single-left-sidebar/1",
-      },
-      {
-        id: 56,
-        title: "Blog single Left sidebar",
-        link: "/blog-single-fullwidth/1",
-      },
-    ],
-  },
-  {
-    id: 88,
-    title: "Contact",
-    link: "/contact",
   },
 ];
 
