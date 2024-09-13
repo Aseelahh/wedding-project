@@ -51,7 +51,6 @@ class Header2 extends Component {
                 </div>
                 <div className="col-lg-3 col-md-6 col-6">
                   <div className="navbar-header">
-<<<<<<< HEAD
                     <Link
                       onClick={ClickHandler}
                       className="navbar-brand logo"
@@ -63,9 +62,6 @@ class Header2 extends Component {
                       </span>
                       24
                     </Link>
-=======
-                    <Link onClick={ClickHandler} className="navbar-brand logo" to="/home">Ife<span>ego<i className="fa fa-heart" aria-hidden="true"></i></span>24</Link>
->>>>>>> 2143ceb (ui-updated)
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-1 col-1">
@@ -82,15 +78,11 @@ class Header2 extends Component {
                           Home
                         </Link>
                         <ul className="sub-menu">
-<<<<<<< HEAD
                           <li>
                             <Link onClick={ClickHandler} to="/home">
                               Main Home
                             </Link>
                           </li>
-=======
-                          <li><Link onClick={ClickHandler} to="/home">Main Home</Link></li>
->>>>>>> 2143ceb (ui-updated)
                           {/* <li><Link onClick={ClickHandler} to="/home2">Announcement S1</Link></li>
                           <li><Link onClick={ClickHandler} to="/home3">Announcement S2</Link></li>
                           <li><Link onClick={ClickHandler} to="/home4">Wedding Planner</Link></li>

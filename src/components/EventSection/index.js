@@ -1,14 +1,8 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
-<<<<<<< HEAD
-import sImg1 from "../../images/TWP.png";
-import sImg2 from "../../images/RTN.png";
-import sImg3 from "../../images/AFTER.png";
-=======
 import sImg1 from "../../images/event/1.jpg";
 import sImg2 from "../../images/event/2.jpg";
 import sImg3 from "../../images/event/3.jpg";
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
 import LocationMap from "../LocationMap";
 
 const Events = [
@@ -17,28 +11,16 @@ const Events = [
     title: "White Wedding ",
     li1: "Saturday, 14 Sep, 2024 11:00 AM – 1:00 PM",
     li2: "St Peter Claver Catholic Church, Ajao Estate, Lagos",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    iframe_src: "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d31709.219725381783!2d3.3236215140273444!3d6.565475213829487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d6.580847599999999!2d3.3554434!4m5!1s0x103b8e6ec4b3c3a9%3A0xa39dc77920b1dc36!2sG8QF%2BFVV%20St.%20Peter%20Claver%20Catholic%20Church%2C%20Chivita%20Ave%2C%20Isolo%2C%20Lagos%20102214%2C%20Lagos!3m2!1d6.5387083!2d3.3245204999999998!5e0!3m2!1sen!2sng!4v1726190853023!5m2!1sen!2sng"
-=======
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
-=======
-    iframe_src: "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d31709.219725381783!2d3.3236215140273444!3d6.565475213829487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d6.580847599999999!2d3.3554434!4m5!1s0x103b8e6ec4b3c3a9%3A0xa39dc77920b1dc36!2sG8QF%2BFVV%20St.%20Peter%20Claver%20Catholic%20Church%2C%20Chivita%20Ave%2C%20Isolo%2C%20Lagos%20102214%2C%20Lagos!3m2!1d6.5387083!2d3.3245204999999998!5e0!3m2!1sen!2sng!4v1726190853023!5m2!1sen!2sng"
->>>>>>> 2143ceb (ui-updated)
+    iframe_src:
+      "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d31709.219725381783!2d3.3236215140273444!3d6.565475213829487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d6.580847599999999!2d3.3554434!4m5!1s0x103b8e6ec4b3c3a9%3A0xa39dc77920b1dc36!2sG8QF%2BFVV%20St.%20Peter%20Claver%20Catholic%20Church%2C%20Chivita%20Ave%2C%20Isolo%2C%20Lagos%20102214%2C%20Lagos!3m2!1d6.5387083!2d3.3245204999999998!5e0!3m2!1sen!2sng!4v1726190853023!5m2!1sen!2sng",
   },
   {
     Simg: sImg2,
     title: "RECEPTION",
     li1: "Saturday, 14 Sep, 2024   1:00 PM – 4:00 PM",
     li2: "Pleasant Event Center Obanta Avenue, off Ajao Str, Adeniyi Jones, Ikeja Lagos",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    iframe_src: "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15853.770115486812!2d3.338473758393812!3d6.591789994429718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d6.5809413999999995!2d3.3553563!4m5!1s0x103b93e97095d7b1%3A0x7e4717bc79dccd3c!2sPleasant%20Event%20Center%2C%201%20Obanta%20Avenue%2C%20Off%20Ajao%20Rd%2C%20Ikeja%2C%20Lagos!3m2!1d6.6029031!2d3.3403026!5e0!3m2!1sen!2sng!4v1726190949395!5m2!1sen!2sng"
-=======
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
-=======
-    iframe_src: "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15853.770115486812!2d3.338473758393812!3d6.591789994429718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d6.5809413999999995!2d3.3553563!4m5!1s0x103b93e97095d7b1%3A0x7e4717bc79dccd3c!2sPleasant%20Event%20Center%2C%201%20Obanta%20Avenue%2C%20Off%20Ajao%20Rd%2C%20Ikeja%2C%20Lagos!3m2!1d6.6029031!2d3.3403026!5e0!3m2!1sen!2sng!4v1726190949395!5m2!1sen!2sng"
->>>>>>> 2143ceb (ui-updated)
+    iframe_src:
+      "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15853.770115486812!2d3.338473758393812!3d6.591789994429718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d6.5809413999999995!2d3.3553563!4m5!1s0x103b93e97095d7b1%3A0x7e4717bc79dccd3c!2sPleasant%20Event%20Center%2C%201%20Obanta%20Avenue%2C%20Off%20Ajao%20Rd%2C%20Ikeja%2C%20Lagos!3m2!1d6.6029031!2d3.3403026!5e0!3m2!1sen!2sng!4v1726190949395!5m2!1sen!2sng",
   },
 
   {
@@ -46,18 +28,9 @@ const Events = [
     title: "AFTER PARTY",
     li1: "Saturday, 14 Sep, 2024   4:00 PM – 9:00 PM",
     li2: "Pleasant Event Center Obanta Avenue, off Ajao Str, Adeniyi Jones, Ikeja Lagos",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    iframe_src: "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15853.770115486812!2d3.338473758393812!3d6.591789994429718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d6.5809413999999995!2d3.3553563!4m5!1s0x103b93e97095d7b1%3A0x7e4717bc79dccd3c!2sPleasant%20Event%20Center%2C%201%20Obanta%20Avenue%2C%20Off%20Ajao%20Rd%2C%20Ikeja%2C%20Lagos!3m2!1d6.6029031!2d3.3403026!5e0!3m2!1sen!2sng!4v1726190949395!5m2!1sen!2sng"
-
-=======
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
-=======
-    iframe_src: "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15853.770115486812!2d3.338473758393812!3d6.591789994429718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d6.5809413999999995!2d3.3553563!4m5!1s0x103b93e97095d7b1%3A0x7e4717bc79dccd3c!2sPleasant%20Event%20Center%2C%201%20Obanta%20Avenue%2C%20Off%20Ajao%20Rd%2C%20Ikeja%2C%20Lagos!3m2!1d6.6029031!2d3.3403026!5e0!3m2!1sen!2sng!4v1726190949395!5m2!1sen!2sng"
-
->>>>>>> 2143ceb (ui-updated)
-  }
-  
+    iframe_src:
+      "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15853.770115486812!2d3.338473758393812!3d6.591789994429718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d6.5809413999999995!2d3.3553563!4m5!1s0x103b93e97095d7b1%3A0x7e4717bc79dccd3c!2sPleasant%20Event%20Center%2C%201%20Obanta%20Avenue%2C%20Off%20Ajao%20Rd%2C%20Ikeja%2C%20Lagos!3m2!1d6.6029031!2d3.3403026!5e0!3m2!1sen!2sng!4v1726190949395!5m2!1sen!2sng",
+  },
 ];
 
 const EventSection = (props) => {
@@ -82,15 +55,7 @@ const EventSection = (props) => {
                       <li>{event.li1}</li>
                       <li>{event.li2}</li>
                       <li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        <LocationMap loc={event.iframe_src}/>
-=======
-                        <LocationMap />
->>>>>>> ba54663 (First image upload done. Fixing image not showing in cloud)
-=======
-                        <LocationMap loc={event.iframe_src}/>
->>>>>>> 2143ceb (ui-updated)
+                        <LocationMap loc={event.iframe_src} />
                       </li>
                     </ul>
                   </div>
