@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { gapi } from "gapi-script";
-import "./styles.css"
+import "./styles.css";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import { CircularProgress } from "@mui/material";
 
 const CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
@@ -116,68 +119,127 @@ const ImagePicker = () => {
       return;
     }
 
-    for (const file of selectedFiles) {
-      try {
-        setIsLoading(true);
+    if (selectedFiles.length == 0) {
+      alert("Please sign select at least one file to upload");
+      return;
+    }
+
+    try {
+      setIsLoading(true);
+      for (const file of selectedFiles) {
         await uploadFileToDrive(file);
-        alert(`${file.name} uploaded successfully!`);
-      } catch (error) {
-        console.error("Error uploading file: ", error);
-        alert("Error uploading file.");
-      } finally {
-        setIsLoading(false);
       }
+      alert(`Files uploaded successfully!`);
+      setPreviewUrls([]);
+      setSelectedFiles([]);
+    } catch (error) {
+      console.error("Error uploading file: ", error);
+      alert("Error uploading file.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <div className="image-picker">
-      <h2>Pick Images</h2>
-      {!isSignedIn ? (
-        <button onClick={handleSignIn}>Sign in with Google</button>
-      ) : (
-        <button onClick={handleSignOut}>Sign out</button>
-      )}
-      <input
-        type="file"
-        multiple
-        accept="image/*,video/*"
-        onChange={handleFileChange}
-      />
-      <p>{isLoading && "Loading..."}</p>
-      <div className="image-preview">
-        {previewUrls.map((url, index) => {
-          const file = selectedFiles[index];
+    <>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {!isSignedIn ? (
+          <Button
+            style={{ width: "200px" }}
+            variant="contained"
+            onClick={handleSignIn}
+          >
+            Sign in with Google
+          </Button>
+        ) : (
+          <Button
+            style={{ width: "150px" }}
+            variant="contained"
+            onClick={handleSignOut}
+          >
+            Sign out
+          </Button>
+        )}
 
-          if (file.type.startsWith("image/")) {
-            return (
-              <img
-                key={index}
-                src={url}
-                alt={file.name}
-                width="200"
-                style={{ margin: "10px" }}
-              />
-            );
-          } else if (file.type.startsWith("video/")) {
-            return (
-              <video
-                key={index}
-                width="300"
-                controls
-                style={{ margin: "10px" }}
-              >
-                <source src={url} type={file.type} />
-                Your browser does not support the video tag.
-              </video>
-            );
-          }
-
-          return null;
-        })}
+        <Typography level="h1" color="#333" fontSize={25} marginTop={2}>
+          Pick Images
+        </Typography>
       </div>
-      <button onClick={handleUpload}>Upload to Google Drive</button>
-    </div>
+      <div className="image-picker">
+        <input
+          type="file"
+          multiple
+          accept="image/*,video/*"
+          onChange={handleFileChange}
+        />
+        <div className="image-preview">
+          {previewUrls.map((url, index) => {
+            const file = selectedFiles[index];
+
+            if (file.type.startsWith("image/")) {
+              return (
+                <img
+                  key={index}
+                  src={url}
+                  alt={file.name}
+                  width="200"
+                  style={{ margin: "10px" }}
+                />
+              );
+            } else if (file.type.startsWith("video/")) {
+              return (
+                <video
+                  key={index}
+                  width="300"
+                  controls
+                  style={{ margin: "10px" }}
+                >
+                  <source src={url} type={file.type} />
+                  Your browser does not support the video tag.
+                </video>
+              );
+            }
+
+            return null;
+          })}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Button
+            disabled={isLoading}
+            variant="contained"
+            onClick={handleUpload}
+          >
+            Upload to Google Drive
+            {isLoading && (
+              <CircularProgress
+                size={24}
+                sx={{
+                  color: "#333",
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  marginTop: "-12px",
+                  marginLeft: "-12px",
+                }}
+              />
+            )}
+          </Button>
+        </div>
+      </div>
+    </>
   );
 };
 
