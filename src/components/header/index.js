@@ -132,6 +132,18 @@ class Header extends Component {
                           Image Upload
                         </Link>
                       </li>
+                      <li>
+                        <Link
+                          activeClass="active"
+                          to="events"
+                          spy={true}
+                          smooth={true}
+                          offset={-80}
+                          duration={500}
+                        >
+                          Events
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
