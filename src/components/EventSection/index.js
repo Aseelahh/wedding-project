@@ -22,12 +22,20 @@ const Events = [
     iframe_src:
       "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15853.770115486812!2d3.338473758393812!3d6.591789994429718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d6.5809413999999995!2d3.3553563!4m5!1s0x103b93e97095d7b1%3A0x7e4717bc79dccd3c!2sPleasant%20Event%20Center%2C%201%20Obanta%20Avenue%2C%20Off%20Ajao%20Rd%2C%20Ikeja%2C%20Lagos!3m2!1d6.6029031!2d3.3403026!5e0!3m2!1sen!2sng!4v1726190949395!5m2!1sen!2sng",
   },
-
   {
     Simg: sImg3,
     title: "AFTER PARTY",
     li1: "Saturday, 14 Sep, 2024   4:00 PM – 9:00 PM",
     li2: "Pleasant Event Center Obanta Avenue, off Ajao Str, Adeniyi Jones, Ikeja Lagos",
+    iframe_src:
+      "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15853.770115486812!2d3.338473758393812!3d6.591789994429718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d6.5809413999999995!2d3.3553563!4m5!1s0x103b93e97095d7b1%3A0x7e4717bc79dccd3c!2sPleasant%20Event%20Center%2C%201%20Obanta%20Avenue%2C%20Off%20Ajao%20Rd%2C%20Ikeja%2C%20Lagos!3m2!1d6.6029031!2d3.3403026!5e0!3m2!1sen!2sng!4v1726190949395!5m2!1sen!2sng",
+  },
+  {
+    Simg: sImg3,
+    title: "LIVE LINK",
+    li1: "Saturday, 14 Sep, 2024",
+    li2: "Online",
+    liveLink: "",
     iframe_src:
       "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15853.770115486812!2d3.338473758393812!3d6.591789994429718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d6.5809413999999995!2d3.3553563!4m5!1s0x103b93e97095d7b1%3A0x7e4717bc79dccd3c!2sPleasant%20Event%20Center%2C%201%20Obanta%20Avenue%2C%20Off%20Ajao%20Rd%2C%20Ikeja%2C%20Lagos!3m2!1d6.6029031!2d3.3403026!5e0!3m2!1sen!2sng!4v1726190949395!5m2!1sen!2sng",
   },
@@ -55,7 +63,11 @@ const EventSection = (props) => {
                       <li>{event.li1}</li>
                       <li>{event.li2}</li>
                       <li>
-                        <LocationMap loc={event.iframe_src} />
+                        {event.liveLink !== null ? (
+                          <a href="./">Facebook live</a>
+                        ) : (
+                          <LocationMap loc={event.iframe_src} />
+                        )}
                       </li>
                     </ul>
                   </div>
